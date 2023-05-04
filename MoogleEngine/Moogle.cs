@@ -3,7 +3,8 @@ using LoadFIles;
 namespace MoogleEngine;
 public static class Moogle
 {
-    public static void Cargar(string query){
+    public static string[] Cargar(string query){
+        string[] Parametros = new string[2];
         LoadFIles.txtData objeto1 = new LoadFIles.txtData(@"c:\Users\dnielpy\Documents\Code\Projects\Moogle\Moogle!\moogle\MoogleEngine\Database");
         objeto1.GetAllData();
 
@@ -11,16 +12,15 @@ public static class Moogle
         objeto2.TFIDF();
         objeto2.QueryTreatment(query);
         objeto2.QueryTFIDF();
+
+        return Parametros;
     }
 
     public static SearchResult Query(string query) {
         // Modifique este método para responder a la búsqueda
-        Cargar(query);
-        SearchItem[] items = new SearchItem[4] {
-            new SearchItem("Hello World", "Lorem ipsum dolor sit amet", 0.9f),
-            new SearchItem("Hello World", "Lorem ipsum dolor sit amet", 0.5f),
-            new SearchItem("Hello World", "Lorem ipsum dolor sit amet", 0.1f),
-            new SearchItem("Hello World", "Lorem ipsum dolor sit amet", 0.1f),
+        string[] Parametros = Cargar(query);
+        SearchItem[] items = new SearchItem[1] {
+            new SearchItem(Parametros[0], Parametros[1], 0.9f),
         };
 
         return new SearchResult(items, query);
