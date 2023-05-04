@@ -7,8 +7,10 @@ public static class Moogle
         LoadFIles.txtData objeto1 = new LoadFIles.txtData(@"c:\Users\dnielpy\Documents\Code\Projects\Moogle\Moogle!\moogle\MoogleEngine\Database");
         objeto1.GetAllData();
 
-        TF_IDF.tfidf objeto2 = new TF_IDF.tfidf(objeto1.NamesvsWords, objeto1.NamesvsUnrepeatedWords, objeto1.Names, query);
+        TF_IDF.tfidf objeto2 = new TF_IDF.tfidf(objeto1.NamesvsWords, objeto1.NamesvsUnrepeatedWords, objeto1.Names);
         objeto2.TFIDF();
+        objeto2.QueryTreatment(query);
+        objeto2.QueryTFIDF();
     }
 
     public static SearchResult Query(string query) {

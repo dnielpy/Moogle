@@ -8,33 +8,33 @@ build_property.PlatformNeutralAssembly =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = MoogleServer
 build_property.RootNamespace = MoogleServer
-build_property.ProjectDir = C:\Users\dnielpy\Documents\Code\Projects\Moogle\Moogle!\moogle\MoogleServer\
+build_property.ProjectDir = c:\Users\dnielpy\Documents\Code\GitHub\Moogle!\Moogle\MoogleServer\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\dnielpy\Documents\Code\Projects\Moogle\Moogle!\moogle\MoogleServer
+build_property.MSBuildProjectDirectory = c:\Users\dnielpy\Documents\Code\GitHub\Moogle!\Moogle\MoogleServer
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/dnielpy/Documents/Code/Projects/Moogle/Moogle\!/moogle/MoogleServer/App.razor]
+[c:/Users/dnielpy/Documents/Code/GitHub/Moogle\!/Moogle/MoogleServer/App.razor]
 build_metadata.AdditionalFiles.TargetPath = QXBwLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/dnielpy/Documents/Code/Projects/Moogle/Moogle\!/moogle/MoogleServer/_Imports.razor]
+[c:/Users/dnielpy/Documents/Code/GitHub/Moogle\!/Moogle/MoogleServer/_Imports.razor]
 build_metadata.AdditionalFiles.TargetPath = X0ltcG9ydHMucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/dnielpy/Documents/Code/Projects/Moogle/Moogle\!/moogle/MoogleServer/Pages/Index.razor]
+[c:/Users/dnielpy/Documents/Code/GitHub/Moogle\!/Moogle/MoogleServer/Pages/Index.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXgucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = b-56lu1l4lic
 
-[C:/Users/dnielpy/Documents/Code/Projects/Moogle/Moogle\!/moogle/MoogleServer/Shared/MainLayout.razor]
+[c:/Users/dnielpy/Documents/Code/GitHub/Moogle\!/Moogle/MoogleServer/Shared/MainLayout.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE1haW5MYXlvdXQucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = b-0m1jt7h6x2
 
-[C:/Users/dnielpy/Documents/Code/Projects/Moogle/Moogle\!/moogle/MoogleServer/Pages/_Host.cshtml]
+[c:/Users/dnielpy/Documents/Code/GitHub/Moogle\!/Moogle/MoogleServer/Pages/_Host.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX0hvc3QuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/dnielpy/Documents/Code/Projects/Moogle/Moogle\!/moogle/MoogleServer/Pages/_Layout.cshtml]
+[c:/Users/dnielpy/Documents/Code/GitHub/Moogle\!/Moogle/MoogleServer/Pages/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX0xheW91dC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 

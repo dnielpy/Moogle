@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\dnielpy\\Documents\\Code\\Projects\\Moogle\\Moogle!\\moogle\\MoogleEngine\\MoogleEngine.csproj": {}
+    "C:\\Users\\dnielpy\\Documents\\Code\\GitHub\\Moogle!\\Moogle\\MoogleEngine\\MoogleEngine.csproj": {}
   },
   "projects": {
-    "C:\\Users\\dnielpy\\Documents\\Code\\Projects\\Moogle\\Moogle!\\moogle\\MoogleEngine\\MoogleEngine.csproj": {
+    "C:\\Users\\dnielpy\\Documents\\Code\\GitHub\\Moogle!\\Moogle\\MoogleEngine\\MoogleEngine.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\dnielpy\\Documents\\Code\\Projects\\Moogle\\Moogle!\\moogle\\MoogleEngine\\MoogleEngine.csproj",
+        "projectUniqueName": "C:\\Users\\dnielpy\\Documents\\Code\\GitHub\\Moogle!\\Moogle\\MoogleEngine\\MoogleEngine.csproj",
         "projectName": "MoogleEngine",
-        "projectPath": "C:\\Users\\dnielpy\\Documents\\Code\\Projects\\Moogle\\Moogle!\\moogle\\MoogleEngine\\MoogleEngine.csproj",
+        "projectPath": "C:\\Users\\dnielpy\\Documents\\Code\\GitHub\\Moogle!\\Moogle\\MoogleEngine\\MoogleEngine.csproj",
         "packagesPath": "C:\\Users\\dnielpy\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\dnielpy\\Documents\\Code\\Projects\\Moogle\\Moogle!\\moogle\\MoogleEngine\\obj\\",
+        "outputPath": "C:\\Users\\dnielpy\\Documents\\Code\\GitHub\\Moogle!\\Moogle\\MoogleEngine\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\dnielpy\\AppData\\Roaming\\NuGet\\NuGet.Config"
