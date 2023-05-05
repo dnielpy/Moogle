@@ -28,7 +28,6 @@ namespace TF_IDF
             NameVSUnrepeatedWords = namevsunrepeatedwords;
             Names = names;
         }
-
         public double Counter(string word, string[] words){
             double contador = 0;
             for (int i = 0; i < words.Length; i++)
@@ -40,7 +39,6 @@ namespace TF_IDF
             }
             return contador;
         }
-        
         public double WhereExist(string word, Dictionary<string, string[]> NombrevsPalabras, string[] Names){
         double DocumentosDodeExiste = 0;
         for (int i = 0; i < Names.Length; i++)
@@ -96,7 +94,6 @@ namespace TF_IDF
             }
         
         }
-    
         public Dictionary<string, Dictionary<string, double>> MultTFIDF(){
             System.Console.WriteLine("\nMultiplicando valores TFIDF en los siguientes documentos:");
             for (int i = 0; i < this.Names.Length; i++)
@@ -123,7 +120,6 @@ namespace TF_IDF
             System.Console.WriteLine("\n-- TFIDF Calculado con exito --");
             return this.Name_Words_TFIDF;
         }   
-
         //A partir de aqui es el trabajo con el query
         public string[] QueryTreatment(string Query){
             //quitar signos de puntuacion a UserQuery
@@ -135,7 +131,6 @@ namespace TF_IDF
             
             return QueryWords;
         }
-
         public void QueryTFIDF(){
             void QueryTF(){
                 System.Console.WriteLine("\nCalculando TF en el Query:");
@@ -174,7 +169,6 @@ namespace TF_IDF
             System.Console.WriteLine("\n-- TFIDF del Query Calculado con exito --");
         }
 
-    
         public void TFIDF(){
             TF();
             IDF();

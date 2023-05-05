@@ -30,7 +30,6 @@ class txtData
     public Dictionary<string, string[]> NamesvsWords = new Dictionary<string, string[]>();
     public Dictionary<string, string[]> NamesvsUnrepeatedWords = new Dictionary<string, string[]>();
 
-
     private String[] GetPaths(){      //Take 'this.Path' and return all the paths of txt files          
         //Only returns paths with '.txt' at the end of them
         for (int i = 0; i < this.AllFilesPaths.Length; i++)
@@ -42,7 +41,6 @@ class txtData
         }
         return this.Paths;
     }
-
     private String[] GetNames(){
         for (int i = 0; i < this.Paths.Length; i++)
         {
@@ -53,7 +51,6 @@ class txtData
         }
         return this.Names;
     }
-    
     private String[] GetTexts(){     //Take this.Paths and return all Texts on the .txt files
         for (int i = 0; i < this.Paths.Length; i++)
         {
@@ -65,7 +62,6 @@ class txtData
         }
         return this.Texts;
     }
-    
     private String[] GetWords(){     //Take this.Texts and return all this.Words of this texts        
         //Hacer este codigo pero para cada elementos de this.Text y almacenarlo en un diccionario
         char[] delimeters = new char[] {' ', '.', ',', ';', ':', '!', '?',};
@@ -79,7 +75,6 @@ class txtData
                 NamesvsUnrepeatedWords.Add(this.Names[i], NamesvsWords[this.Names[i]].Distinct().ToArray());
             }
         }    
-
         TextVar = "";
         for (int i = 0; i < this.Texts.Length; i++)
         {
@@ -88,24 +83,9 @@ class txtData
         Words =  TextVar.Split(delimeters, StringSplitOptions.RemoveEmptyEntries);
         return this.Words;
     }
-
     private String[] CleanWords(){       //This clean duplicated words
         this.UnrepeatedWords = Words.Distinct().ToArray();
         return this.UnrepeatedWords;
-    }
-
-    private Dictionary<string, int>GetTokenized(){
-        for (int i = 0; i < this.UnrepeatedWords.Length; i++)
-        {
-            this.TokenizedWords.Add(this.UnrepeatedWords[i], i);
-        }
-        return this.TokenizedWords;
-    }
-
-    //Crear un diccionario que contenga los nombres de los txt y las palabras que contiene
-    private Dictionary<string, string[]>GetNamevsWords(){
-        
-        return this.NamesvsWords;
     }
     
     public string[] GetAllData(){
@@ -123,22 +103,11 @@ class txtData
         System.Console.WriteLine("Cargando Datos...40% ⏳");
         CleanWords();
         System.Console.WriteLine("Cargando Datos...100% ⏳");
-        GetTokenized();
         crono.Stop();
         float time = crono.ElapsedMilliseconds / 1000;
         System.Console.WriteLine($"Datos cargados con exito  - {time}/s ✅");
         return this.Texts;
+        }
     }
-
-/*                      Implement this class like this example:
-=> Start of Example    
-    static void Main(){
-        txtData Objeto1 = new txtData("/home/dnielpy/Documentos/Code/Projects/Moogle/MoogleTest/Database");
-        Objeto1.GetAllData();
-        System.Console.WriteLine(String.Join(", ", Objeto1.Words));
-    }
-=> End of Example*/
-}
-
 }
 
