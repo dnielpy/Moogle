@@ -12,10 +12,10 @@ public static class Moogle
         objeto2.TFIDF();
         objeto2.QueryTreatment(query);
         objeto2.QueryTFIDF();
+        objeto2.CosSimilitude();
 
         return Parametros;
     }
-
     public static SearchResult Query(string query) {
         // Modifique este método para responder a la búsqueda
         string[] Parametros = Cargar(query);
