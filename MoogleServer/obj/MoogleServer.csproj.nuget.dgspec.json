@@ -1,0 +1,121 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\dnielpy\\Documents\\Code\\Projects\\Moogle\\Moogle!\\moogle\\MoogleServer\\MoogleServer.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\dnielpy\\Documents\\Code\\Projects\\Moogle\\Moogle!\\moogle\\MoogleEngine\\MoogleEngine.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\dnielpy\\Documents\\Code\\Projects\\Moogle\\Moogle!\\moogle\\MoogleEngine\\MoogleEngine.csproj",
+        "projectName": "MoogleEngine",
+        "projectPath": "C:\\Users\\dnielpy\\Documents\\Code\\Projects\\Moogle\\Moogle!\\moogle\\MoogleEngine\\MoogleEngine.csproj",
+        "packagesPath": "C:\\Users\\dnielpy\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\dnielpy\\Documents\\Code\\Projects\\Moogle\\Moogle!\\moogle\\MoogleEngine\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\dnielpy\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.407\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\dnielpy\\Documents\\Code\\Projects\\Moogle\\Moogle!\\moogle\\MoogleServer\\MoogleServer.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\dnielpy\\Documents\\Code\\Projects\\Moogle\\Moogle!\\moogle\\MoogleServer\\MoogleServer.csproj",
+        "projectName": "MoogleServer",
+        "projectPath": "C:\\Users\\dnielpy\\Documents\\Code\\Projects\\Moogle\\Moogle!\\moogle\\MoogleServer\\MoogleServer.csproj",
+        "packagesPath": "C:\\Users\\dnielpy\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\dnielpy\\Documents\\Code\\Projects\\Moogle\\Moogle!\\moogle\\MoogleServer\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\dnielpy\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "C:\\Users\\dnielpy\\Documents\\Code\\Projects\\Moogle\\Moogle!\\moogle\\MoogleEngine\\MoogleEngine.csproj": {
+                "projectPath": "C:\\Users\\dnielpy\\Documents\\Code\\Projects\\Moogle\\Moogle!\\moogle\\MoogleEngine\\MoogleEngine.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.407\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
