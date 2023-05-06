@@ -1,5 +1,8 @@
 using System.Collections.Generic;
 using System;
+using System.IO;
+using System.Diagnostics;
+using System.Linq;
 
 namespace TF_IDF
 {
@@ -23,6 +26,10 @@ namespace TF_IDF
         public Dictionary<string, double> Documents_Similitude = new Dictionary<string, double>();
         public Dictionary<string, double> Documents_SimilitudeCos = new Dictionary<string, double>();
 
+        //Resultados
+        public Dictionary<string, double> Results = new Dictionary<string, double>();
+        public Dictionary<string, string> Snippet = new Dictionary<string, string>();
+
         public tfidf(Dictionary<string, string[]> namevswords, Dictionary<string, string[]> namevsunrepeatedwords, string[] names){
             //Diccionarios del tfidf normal
             Dictionary<string, Dictionary<string, double>> Name_Words_TF;
@@ -40,6 +47,10 @@ namespace TF_IDF
             //Diccionarios de la similitud
             Dictionary<string, double> Documents_Similitude;
             Dictionary<string, double> Documents_SimilitudeCos;
+
+            //Results
+            Dictionary<string, double> Results;
+            Dictionary<string, string> Snippet;
         }
         public double Counter(string word, string[] words){
             double contador = 0;
@@ -130,7 +141,6 @@ namespace TF_IDF
                 this.Name_Words_TFIDF.Add(this.Names[i], WordsvsTFIDF);
                 System.Console.WriteLine(this.Names[i]);
             }
-            System.Console.WriteLine("\n-- TFIDF Calculado con exito --");
             return this.Name_Words_TFIDF;
         }   
         //A partir de aqui es el trabajo con el query
@@ -146,7 +156,6 @@ namespace TF_IDF
         }
         public void QueryTFIDF(){
             void QueryTF(){
-                System.Console.WriteLine("\nCalculando TF en el Query:");
                 for (int i = 0; i < QueryWords.Length; i++)
                 {
                     if (Query_TF.ContainsKey(QueryWords[i]) != true)
@@ -156,7 +165,6 @@ namespace TF_IDF
                 }
             }
             void QueryIDF(){
-                System.Console.WriteLine("\nCalculando IDF en el Query:");
                 double cantidad_total_documentos = this.Names.Length;
                 for (int i = 0; i < QueryWords.Length; i++)
                 {
@@ -168,7 +176,6 @@ namespace TF_IDF
                 }
             }
             void QueryMultTFIDF(){
-                System.Console.WriteLine("\nMultiplicando valores TFIDF en el Query:");
                 for (int i = 0; i < QueryWords.Length; i++)
                 {
                     double tf = Query_TF[QueryWords[i]];
@@ -182,19 +189,19 @@ namespace TF_IDF
                             Query_TFIDF.Add(QueryWords[i], tfidf);
                         }   
                     }
-
                 }
             }
             QueryTF();
             QueryIDF();
             QueryMultTFIDF();
-            System.Console.WriteLine("\n-- TFIDF del Query Calculado con exito --");
         }
         public void CosSimilitude(){
             void Similitude(){
                 //Sacar los tfidf que tienen las palabras del query en la bd en caso de que existan
                 Dictionary<string, double> QueryWordsOnBD = new Dictionary<string, double>();
                 Dictionary<string, double> Similitud = new Dictionary<string, double>();
+                Dictionary<string, double> CosSimilitud = new Dictionary<string, double>();
+
                 foreach (var name in this.Names)
                 {
                     Dictionary<string, double> MultTFIDF = new Dictionary<string, double>();
@@ -212,14 +219,92 @@ namespace TF_IDF
                     }
                     Similitud.Add(name, sum);
                 }
-            }
-            Similitude();
-        }
+            //Calcular la similitud del coseno
+                foreach (var name in this.Names)
+                {
+                    double sum = 0;
+                    double sum1 = 0;
+                    double sum2 = 0;
+                    foreach (var item in Name_Words_TFIDF[name].Values)
+                    {
+                        sum1 += Math.Pow(item, 2);
+                    }
+                    foreach (var item in Query_TFIDF.Values)
+                    {
+                        sum2 += Math.Pow(item, 2);
+                    }
+                    sum = Math.Sqrt(sum1) * Math.Sqrt(sum2);
+                    CosSimilitud.Add(name, sum);
+                }
+                foreach (var name in this.Names)
+                {
+                    CosSimilitud[name] = Similitud[name] / CosSimilitud[name];
+                }
+                //Ordenar los valores de mayor a menor
+                var items = from pair in CosSimilitud
+                            orderby pair.Value descending
+                            select pair;
+                foreach (var score in CosSimilitud.Keys)
+                {
+                    if (CosSimilitud[score] > 0)
+                    {
+                        this.Results.Add(score, CosSimilitud[score]);
+                    }
+                }
 
+                //calcular el snipet con 4 palabras antes y 4 despues de la palabra clave
+                foreach (var item in this.Results.Keys)
+                {
+                    string[] words = this.NameVSWorsd[item];
+                    string[] unrepeatedwords = this.NameVSUnrepeatedWords[item];
+                    string[] snipet = new string[8];
+                    int index = 0;
+                    for (int i = 0; i < words.Length; i++)
+                    {
+                        if (words[i] == QueryWords[0])
+                        {
+                            index = i;
+                            break;
+                        }
+                    }
+                    if (index - 4 < 0)
+                    {
+                        for (int i = 0; i < 8; i++)
+                        {
+                            snipet[i] = words[i];
+                        }
+                    }
+                    else if (index + 4 > words.Length)
+                    {
+                        for (int i = words.Length - 8; i < words.Length; i++)
+                        {
+                            snipet[i] = words[i];
+                        }
+                    }
+                    else
+                    {
+                        int contador = 0;
+                        for (int i = index - 4; i < index + 4; i++)
+                        {
+                            snipet[contador] = words[i];
+                            contador++;
+                        }
+                    }
+                    string snipetvar = string.Join(" ", snipet);
+                    this.Snippet.Add(item, snipetvar);
+                }
+        }
+        Similitude();
+        }
         public void TFIDF(){
+            Stopwatch crono = new Stopwatch();
+            crono.Start();
             TF();
             IDF();
             MultTFIDF();
+            crono.Stop();
+            float time = crono.ElapsedMilliseconds / 1000;
+            System.Console.WriteLine($"\nIFIDF Calculado Con Exito  - {time}/s ✅");
         }
     }
 }

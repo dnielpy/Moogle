@@ -46,7 +46,7 @@ class txtData
         {
             if (this.Paths[i] != null)
             {
-                this.Names[i] = this.Paths[i].Replace(@"c:\Users\dnielpy\Documents\Code\Projects\Moogle\Moogle!\moogle\MoogleEngine\Database", "");
+                this.Names[i] = this.Paths[i].Replace(@"c:\Users\dnielpy\Documents\Code\GitHub\Moogle!\Moogle\MoogleEngine\Database", "");
             }
         }
         return this.Names;
