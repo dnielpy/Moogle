@@ -73,44 +73,44 @@ namespace TF_IDF
        }
 
         public void TF(){ 
-    System.Console.WriteLine("\nCalculando TF en los siguientes Documentos:");
-    Dictionary<string, double> wordCounts = new Dictionary<string, double>();
-    int documentLength = 0;
+            System.Console.WriteLine("\nCalculando TF en los siguientes Documentos:");
+            Dictionary<string, double> wordCounts = new Dictionary<string, double>();
+            int documentLength = 0;
 
-    // Calcular el número de ocurrencias de cada palabra en el documento y la longitud del documento
-    foreach (string[] words in this.NameVSWorsd.Values)
-    {
-        documentLength += words.Length;
-        foreach (string word in words)
-        {
-            if (wordCounts.ContainsKey(word))
+            // Calcular el número de ocurrencias de cada palabra en el documento y la longitud del documento
+            foreach (string[] words in this.NameVSWorsd.Values)
             {
-                wordCounts[word]++;
+                documentLength += words.Length;
+                foreach (string word in words)
+                {
+                    if (wordCounts.ContainsKey(word))
+                    {
+                        wordCounts[word]++;
+                    }
+                    else
+                    {
+                        wordCounts[word] = 1;
+                    }
+                }
             }
-            else
+
+            // Calcular TF para cada palabra en cada documento
+            foreach (string name in this.Names)
             {
-                wordCounts[word] = 1;
-            }
-        }
-    }
+                string[] words = this.NameVSWorsd[name];
+                Dictionary<string, double> nameVsTF = new Dictionary<string, double>();
 
-    // Calcular TF para cada palabra en cada documento
-    foreach (string name in this.Names)
-    {
-        string[] words = this.NameVSWorsd[name];
-        Dictionary<string, double> nameVsTF = new Dictionary<string, double>();
-
-        foreach (string word in this.NameVSUnrepeatedWords[name])
-        {
-            double count = wordCounts[word];
-            double tf = count / documentLength;
-            nameVsTF[word] = tf;
-        }
-
-        System.Console.WriteLine(name);
-        this.Name_Words_TF.Add(name, nameVsTF);
-    }  
-} 
+                foreach (string word in this.NameVSUnrepeatedWords[name])
+                {
+                    double count = wordCounts[word];
+                    double tf = count / documentLength;
+                    nameVsTF[word] = tf;
+                }
+        
+                System.Console.WriteLine(name);
+                this.Name_Words_TF.Add(name, nameVsTF);
+            }  
+        } 
 
         public void IDF(){
             System.Console.WriteLine("\nCalculando IDF en los siguientes Documentos:");
