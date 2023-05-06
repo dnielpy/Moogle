@@ -53,15 +53,7 @@ namespace TF_IDF
             Dictionary<string, string> Snippet;
         }
         public double Counter(string word, string[] words){
-            double contador = 0;
-            for (int i = 0; i < words.Length; i++)
-            {
-                if (word == words[i])
-                {
-                    contador++;
-                }
-            }
-            return contador;
+              return words.Count(w => w == word);
         }
         public double WhereExist(string word, Dictionary<string, string[]> NombrevsPalabras, string[] Names){
         double DocumentosDodeExiste = 0;
@@ -81,44 +73,92 @@ namespace TF_IDF
        }
 
         public void TF(){ 
-            System.Console.WriteLine("\nCalculando TF en los siguientes Documentos:");
-            for (int i = 0; i < this.Names.Length; i++)
-            {
-                string[] PalabrasTemp = this.NameVSWorsd[this.Names[i]];
-                string[] PalabrasNoRepetidasTemp = this.NameVSUnrepeatedWords[this.Names[i]];
-                Dictionary<string, double> NamevsTF = new Dictionary<string, double>();
+    System.Console.WriteLine("\nCalculando TF en los siguientes Documentos:");
+    Dictionary<string, double> wordCounts = new Dictionary<string, double>();
+    int documentLength = 0;
 
-                //Tengo que tener lo mismo de arriba pero NamevsUnrepeatedWords
-                for (int x = 0; x < PalabrasNoRepetidasTemp.Length; x++)
-                {
-                    NamevsTF.Add(PalabrasNoRepetidasTemp[x], Counter(PalabrasNoRepetidasTemp[x], PalabrasTemp)/PalabrasTemp.Length);            
-                }
-                System.Console.WriteLine(this.Names[i]);
-                this.Name_Words_TF.Add(this.Names[i], NamevsTF);
-            }  
+    // Calcular el número de ocurrencias de cada palabra en el documento y la longitud del documento
+    foreach (string[] words in this.NameVSWorsd.Values)
+    {
+        documentLength += words.Length;
+        foreach (string word in words)
+        {
+            if (wordCounts.ContainsKey(word))
+            {
+                wordCounts[word]++;
+            }
+            else
+            {
+                wordCounts[word] = 1;
+            }
         }
+    }
+
+    // Calcular TF para cada palabra en cada documento
+    foreach (string name in this.Names)
+    {
+        string[] words = this.NameVSWorsd[name];
+        Dictionary<string, double> nameVsTF = new Dictionary<string, double>();
+
+        foreach (string word in this.NameVSUnrepeatedWords[name])
+        {
+            double count = wordCounts[word];
+            double tf = count / documentLength;
+            nameVsTF[word] = tf;
+        }
+
+        System.Console.WriteLine(name);
+        this.Name_Words_TF.Add(name, nameVsTF);
+    }  
+} 
 
         public void IDF(){
             System.Console.WriteLine("\nCalculando IDF en los siguientes Documentos:");
-            double cantidad_total_documentos = this.Names.Length;
-            for (int i = 0; i < this.Names.Length; i++)
+            Dictionary<string, int> wordCounts = new Dictionary<string, int>();
+            Dictionary<string, double> wordIDFs = new Dictionary<string, double>();
+            double totalDocuments = this.Names.Length;
+
+            // Calcular el número de documentos que contienen cada palabra
+            foreach (string[] words in this.NameVSWorsd.Values)
             {
-                string[] PalabrasTemp = this.NameVSWorsd[this.Names[i]];
-                string[] PalabrasNoRepetidasTemp = this.NameVSUnrepeatedWords[this.Names[i]];
-                Dictionary<string, double> NamevsIDF = new Dictionary<string, double>();
-
-                //Tengo que tener lo mismo de arriba pero NamevsUnrepeatedWords
-                for (int x = 0; x < PalabrasNoRepetidasTemp.Length; x++)
+                HashSet<string> uniqueWords = new HashSet<string>(words);
+                foreach (string word in uniqueWords)
                 {
-                    double idf = Math.Log(cantidad_total_documentos/WhereExist(PalabrasNoRepetidasTemp[x], this.NameVSWorsd, this.Names));
-
-                    NamevsIDF.Add(PalabrasNoRepetidasTemp[x], idf);            
+                    if (wordCounts.ContainsKey(word))
+                    {
+                        wordCounts[word]++;
+                    }
+                    else
+                    {
+                        wordCounts[word] = 1;
+                    }
                 }
-                System.Console.WriteLine(this.Names[i]);
-                this.Name_Words_IDF.Add(this.Names[i], NamevsIDF);
             }
-        
-        }
+
+            // Calcular IDF para cada palabra
+            foreach (string word in wordCounts.Keys)
+            {
+                double idf = Math.Log(totalDocuments / wordCounts[word]);
+                wordIDFs[word] = idf;
+            }
+
+            // Calcular IDF para cada palabra en cada documento
+            foreach (string name in this.Names)
+            {
+                string[] words = this.NameVSWorsd[name];
+                Dictionary<string, double> nameVsIDF = new Dictionary<string, double>();
+
+                foreach (string word in this.NameVSUnrepeatedWords[name])
+                {
+                    double idf = wordIDFs[word];
+                    nameVsIDF[word] = idf;
+                }
+
+                System.Console.WriteLine(name);
+                this.Name_Words_IDF.Add(name, nameVsIDF);
+            }
+        } 
+
         public Dictionary<string, Dictionary<string, double>> MultTFIDF(){
             System.Console.WriteLine("\nMultiplicando valores TFIDF en los siguientes documentos:");
             for (int i = 0; i < this.Names.Length; i++)
@@ -144,10 +184,6 @@ namespace TF_IDF
             }
             return this.Name_Words_TFIDF;
         }   
-
-       
-
-
          
         //A partir de aqui es el trabajo con el query
         public string[] QueryTreatment(string Query){
