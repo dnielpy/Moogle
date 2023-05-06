@@ -12,7 +12,7 @@ public static class Moogle
     public static Dictionary<string, double> Cargar(string query){
         LoadFIles.txtData objeto1 = new LoadFIles.txtData(@"c:\Users\dnielpy\Documents\Code\GitHub\Moogle!\Moogle\MoogleEngine\Database");
         objeto1.GetAllData();
-
+    
         TF_IDF.tfidf objeto2 = new TF_IDF.tfidf(objeto1.NamesvsWords, objeto1.NamesvsUnrepeatedWords, objeto1.Names);
         objeto2.TFIDF();
         objeto2.QueryTreatment(query);

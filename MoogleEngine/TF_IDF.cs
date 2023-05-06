@@ -97,6 +97,7 @@ namespace TF_IDF
                 this.Name_Words_TF.Add(this.Names[i], NamevsTF);
             }  
         }
+
         public void IDF(){
             System.Console.WriteLine("\nCalculando IDF en los siguientes Documentos:");
             double cantidad_total_documentos = this.Names.Length;
@@ -143,6 +144,11 @@ namespace TF_IDF
             }
             return this.Name_Words_TFIDF;
         }   
+
+       
+
+
+         
         //A partir de aqui es el trabajo con el query
         public string[] QueryTreatment(string Query){
             //quitar signos de puntuacion a UserQuery
