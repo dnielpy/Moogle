@@ -27,7 +27,7 @@ namespace TF_IDF
         public Dictionary<string, double> Documents_SimilitudeCos = new Dictionary<string, double>();
 
         //Resultados
-        public Dictionary<string, double> Results = new Dictionary<string, double>();
+        public Dictionary<double, string> Results = new Dictionary<double, string>();
         public Dictionary<string, string> Snippet = new Dictionary<string, string>();
 
         public tfidf(Dictionary<string, string[]> namevswords, Dictionary<string, string[]> namevsunrepeatedwords, string[] names){
@@ -49,7 +49,7 @@ namespace TF_IDF
             Dictionary<string, double> Documents_SimilitudeCos;
 
             //Results
-            Dictionary<string, double> Results;
+            Dictionary<double, string> Results;
             Dictionary<string, string> Snippet;
         }
         public double Counter(string word, string[] words){
@@ -290,12 +290,13 @@ namespace TF_IDF
                 {
                     if (CosSimilitud[score] > 0)
                     {
-                        this.Results.Add(score, CosSimilitud[score]);
+                        this.Results.Add(CosSimilitud[score], score);
                     }
                 }
+                
 
                 //calcular el snipet con 4 palabras antes y 4 despues de la palabra clave
-                foreach (var item in this.Results.Keys)
+                foreach (var item in this.Results.Values)
                 {
                     string[] words = this.NameVSWorsd[item];
                     string[] unrepeatedwords = this.NameVSUnrepeatedWords[item];
