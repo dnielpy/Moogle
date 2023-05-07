@@ -401,7 +401,7 @@ namespace TF_IDF
         }
         Similitude();
         }
-        
+
         public void TFIDF(){
             // Iniciar un cronómetro para medir el tiempo de ejecución
             Stopwatch crono = new Stopwatch();
@@ -414,7 +414,7 @@ namespace TF_IDF
             float time = crono.ElapsedMilliseconds / 1000;
 
             // Imprimir un mensaje indicando que el cálculo de TFIDF se ha completado con éxito y el tiempo de ejecución
-            System.Console.WriteLine($"nIFIDF Calculado Con Exito  - {time}/s ✅");
+            System.Console.WriteLine($"\nIFIDF Calculado Con Exito  - {time}/s ✅");
         }
     }
 }
