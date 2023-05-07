@@ -2,6 +2,21 @@
 
 html, body {
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    color: white;
+    background-image: url(R4.jpg);
+}
+
+.fallout{
+    font-family: 'overseer';
+    font-size: 100px;
+    position: relative;
+    bottom: 10px;
+    color: #ffffff;
+
+}
+@font-face {
+    font-family: "overseer";
+    src: url(Overseer.otf);
 }
 
 h1:focus {
@@ -9,13 +24,17 @@ h1:focus {
 }
 
 a, .btn-link {
-    color: #0071c1;
+    background-image: url(r2.png);
+
 }
 
 .btn-primary {
-    color: #fff;
-    background-color: #1b6ec2;
-    border-color: #1861ac;
+background-image: url(r2.png);
+  background-size: cover;
+  width: 40px;
+  height: 40px;
+  border: none;
+  cursor: pointer;
 }
 
 .content {

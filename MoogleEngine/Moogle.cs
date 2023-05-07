@@ -42,7 +42,7 @@ public static class Moogle
     public static SearchResult Query(string query) {
         // Modifique este método para responder a la búsqueda
         Dictionary<double, string> Results = Cargar(query);
-        var ResultadosOrdenados = Results.OrderByDescending(x => x.Value);      //Ordenas score
+        var ResultadosOrdenados = Results.OrderByDescending(x => x.Value);      //Ordenar score
 
         List<SearchItem> items = new List<SearchItem>();
 
