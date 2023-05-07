@@ -8,8 +8,8 @@ namespace LoadFIles{
 class txtData
 {
     public txtData(string path){    // =>  'Bob The Constructor'
-        Path = path;        //Should have this value => "/home/dnielpy/Documentos/Code/Projects/Moogle/MoogleTest/Database";
-        AllFilesPaths = Directory.GetFiles(this.Path);  // => This add all the paths of ALL file on the directory
+        MyPath = path;        //Should have this value => "/home/dnielpy/Documentos/Code/Projects/Moogle/MoogleTest/Database";
+        AllFilesPaths = Directory.GetFiles(this.MyPath);  // => This add all the paths of ALL file on the directory
         Paths = new string[AllFilesPaths.Length];  // => This have only paths of txt files
         Texts = new string[Paths.Length];  // => This contains all Texts of .txt files
         Names = new string[Paths.Length];
@@ -18,7 +18,7 @@ class txtData
         Dictionary<string, int> TokenizedWords;
     }
     
-    private string Path{get;set;}
+    private string MyPath{get;set;}
     private string TextVar{get;set;}
     public string[] AllFilesPaths{get;set;}
     public string[] Paths{get;set;}
@@ -46,7 +46,11 @@ class txtData
         {
             if (this.Paths[i] != null)
             {
-                this.Names[i] = this.Paths[i].Replace(@"c:\Users\dnielpy\Documents\Code\GitHub\Moogle!\Moogle\MoogleEngine\Database", "");
+                string tempath = Path.Combine(Directory.GetCurrentDirectory());
+                string mypath = tempath.Replace("MoogleServer", "");
+                mypath += @"Content";
+                this.Names[i] = this.Paths[i].Replace(mypath, "");
+                this.Names[i] = this.Names[i].Replace(".txt", "");
             }
         }
         return this.Names;
