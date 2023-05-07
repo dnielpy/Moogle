@@ -80,7 +80,7 @@ namespace TF_IDF
        }
 
         public void TF(){ 
-            System.Console.WriteLine("nCalculando TF en los siguientes Documentos:");
+            System.Console.WriteLine("\nCalculando TF en los siguientes Documentos:");
             // Crear un diccionario para almacenar el número de ocurrencias de cada palabra en el documento
             Dictionary<string, double> wordCounts = new Dictionary<string, double>();
             // Inicializar la longitud del documento
@@ -123,7 +123,6 @@ namespace TF_IDF
                     // Almacenar el TF en el diccionario
                     nameVsTF[word] = tf;
                 }
-        
                 // Imprimir el nombre del documento
                 System.Console.WriteLine(name);
                 // Almacenar el diccionario de TF para el documento
