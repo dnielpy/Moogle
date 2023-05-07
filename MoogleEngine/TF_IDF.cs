@@ -52,16 +52,23 @@ namespace TF_IDF
             Dictionary<double, string> Results;
             Dictionary<string, string> Snippet;
         }
-        public double Counter(string word, string[] words){
+    // Este método cuenta la cantidad de veces que una palabra aparece en un arreglo de palabras    
+    public double Counter(string word, string[] words){
               return words.Count(w => w == word);
-        }
-        public double WhereExist(string word, Dictionary<string, string[]> NombrevsPalabras, string[] Names){
+    }
+
+    // Este método cuenta la cantidad de documentos en los que aparece una palabra
+    public double WhereExist(string word, Dictionary<string, string[]> NombrevsPalabras, string[] Names){
         double DocumentosDodeExiste = 0;
+        // Se recorre el arreglo de nombres de documentos Names
         for (int i = 0; i < Names.Length; i++)
         {
+            // Se obtiene el arreglo de palabras del documento actual
             string[] Documento = NombrevsPalabras[Names[i]];
+            // Se recorre el arreglo de palabras del documento actual
             for (int x = 0; x < Documento.Length; x++)
             {
+                // Si la palabra actual es igual a la palabra buscada, se incrementa el contador de documentos donde aparece la palabra
                 if (Documento[x] == word)
                 {
                     DocumentosDodeExiste++;
@@ -73,14 +80,18 @@ namespace TF_IDF
        }
 
         public void TF(){ 
-            System.Console.WriteLine("\nCalculando TF en los siguientes Documentos:");
+            System.Console.WriteLine("nCalculando TF en los siguientes Documentos:");
+            // Crear un diccionario para almacenar el número de ocurrencias de cada palabra en el documento
             Dictionary<string, double> wordCounts = new Dictionary<string, double>();
+            // Inicializar la longitud del documento
             int documentLength = 0;
 
             // Calcular el número de ocurrencias de cada palabra en el documento y la longitud del documento
             foreach (string[] words in this.NameVSWorsd.Values)
             {
+                // Incrementar la longitud del documento
                 documentLength += words.Length;
+                // Contar el número de ocurrencias de cada palabra
                 foreach (string word in words)
                 {
                     if (wordCounts.ContainsKey(word))
@@ -97,31 +108,44 @@ namespace TF_IDF
             // Calcular TF para cada palabra en cada documento
             foreach (string name in this.Names)
             {
+                // Obtener las palabras del documento
                 string[] words = this.NameVSWorsd[name];
+                // Crear un diccionario para almacenar el TF de cada palabra en el documento
                 Dictionary<string, double> nameVsTF = new Dictionary<string, double>();
 
+                // Calcular el TF para cada palabra en el documento
                 foreach (string word in this.NameVSUnrepeatedWords[name])
                 {
+                    // Obtener el número de ocurrencias de la palabra
                     double count = wordCounts[word];
+                    // Calcular el TF
                     double tf = count / documentLength;
+                    // Almacenar el TF en el diccionario
                     nameVsTF[word] = tf;
                 }
         
+                // Imprimir el nombre del documento
                 System.Console.WriteLine(name);
-                this.Name_Words_TF.Add(name, nameVsTF);
+                // Almacenar el diccionario de TF para el documento
+                this.Name_Words_TF.Add(name, nameVsTF); 
             }  
-        } 
-
+        }
         public void IDF(){
+            // Imprimir mensaje de inicio
             System.Console.WriteLine("\nCalculando IDF en los siguientes Documentos:");
+            // Crear un diccionario para almacenar el número de documentos que contienen cada palabra
             Dictionary<string, int> wordCounts = new Dictionary<string, int>();
+            // Crear un diccionario para almacenar el IDF de cada palabra
             Dictionary<string, double> wordIDFs = new Dictionary<string, double>();
+            // Obtener el número total de documentos
             double totalDocuments = this.Names.Length;
 
             // Calcular el número de documentos que contienen cada palabra
             foreach (string[] words in this.NameVSWorsd.Values)
             {
+                // Crear un conjunto de palabras únicas en el documento
                 HashSet<string> uniqueWords = new HashSet<string>(words);
+                // Contar el número de documentos que contienen cada palabra
                 foreach (string word in uniqueWords)
                 {
                     if (wordCounts.ContainsKey(word))
@@ -138,105 +162,130 @@ namespace TF_IDF
             // Calcular IDF para cada palabra
             foreach (string word in wordCounts.Keys)
             {
+                // Calcular IDF
                 double idf = Math.Log(totalDocuments / wordCounts[word]);
+                // Almacenar IDF en el diccionario
                 wordIDFs[word] = idf;
             }
 
             // Calcular IDF para cada palabra en cada documento
             foreach (string name in this.Names)
             {
+                // Obtener las palabras del documento
                 string[] words = this.NameVSWorsd[name];
+                // Crear un diccionario para almacenar el IDF de cada palabra en el documento
                 Dictionary<string, double> nameVsIDF = new Dictionary<string, double>();
 
+                // Calcular IDF para cada palabra en el documento
                 foreach (string word in this.NameVSUnrepeatedWords[name])
                 {
+                    // Obtener IDF de la palabra
                     double idf = wordIDFs[word];
+                    // Almacenar IDF en el diccionario
                     nameVsIDF[word] = idf;
                 }
 
+                // Imprimir el nombre del documento
                 System.Console.WriteLine(name);
+                // Almacenar el diccionario de IDF para el documento
                 this.Name_Words_IDF.Add(name, nameVsIDF);
             }
-        } 
+        }
 
         public Dictionary<string, Dictionary<string, double>> MultTFIDF(){
+            // Imprimir mensaje de inicio
             System.Console.WriteLine("\nMultiplicando valores TFIDF en los siguientes documentos:");
+            // Iterar sobre cada documento
             for (int i = 0; i < this.Names.Length; i++)
             {
-                //Diccionarios a iterar
+                // Obtener las palabras del documento y los diccionarios de TF e IDF
                 string[] PalabrasTemp = this.NameVSWorsd[this.Names[i]];
                 string[] PalabrasNoRepetidasTemp = this.NameVSUnrepeatedWords[this.Names[i]];
                 Dictionary<string, double> WordsvsTF = this.Name_Words_TF[Names[i]];
                 Dictionary<string, double> WordsvsIDF = this.Name_Words_IDF[Names[i]];      
-                //Diccionario a indexar
+                // Crear un diccionario para almacenar los valores TFIDF de cada palabra en el documento
                 Dictionary<string, double> WordsvsTFIDF = new Dictionary<string, double>();
                 
+                // Calcular el valor TFIDF para cada palabra en el documento
                 for (int x = 0; x < PalabrasNoRepetidasTemp.Length; x++)
                 {
+                    // Obtener el valor TF y IDF de la palabra
                     double tf = WordsvsTF[PalabrasNoRepetidasTemp[x]];
                     double idf = WordsvsIDF[PalabrasNoRepetidasTemp[x]];
+                    // Calcular el valor TFIDF
                     double tfidf = tf*idf;
-                    
+                    // Almacenar el valor TFIDF en el diccionario
                     WordsvsTFIDF.Add(PalabrasNoRepetidasTemp[x], tfidf);
                 }
+                // Almacenar el diccionario de TFIDF para el documento
                 this.Name_Words_TFIDF.Add(this.Names[i], WordsvsTFIDF);
+                // Imprimir el nombre del documento
                 System.Console.WriteLine(this.Names[i]);
             }
+            // Devolver el diccionario de TFIDF para todos los documentos
             return this.Name_Words_TFIDF;
-        }   
+        } 
          
         //A partir de aqui es el trabajo con el query
-        public string[] QueryTreatment(string Query){
-            //quitar signos de puntuacion a UserQuery
-            Query = Query.Replace(",", "");
-            //Poner todo userquery en minuscula
-            Query = Query.ToLower();
-            //separar UserQuery en palabras e indexarlo en QureryWords
-            QueryWords = Query.Split(" ");
-            
-            return QueryWords;
+    public string[] QueryTreatment(string Query){
+    //quitar signos de puntuacion a UserQuery
+    Query = Query.Replace(",", "");
+    //Poner todo userquery en minuscula
+    Query = Query.ToLower();
+    //separar UserQuery en palabras e indexarlo en QureryWords
+    QueryWords = Query.Split(" ");
+    
+    return QueryWords;
+    }
+
+    public void QueryTFIDF(){
+    //Función para calcular TF del query
+    void QueryTF(){
+        for (int i = 0; i < QueryWords.Length; i++)
+        {
+            //Si la palabra no está en el diccionario de TF del query, se agrega
+            if (Query_TF.ContainsKey(QueryWords[i]) != true)
+            {
+                //Se calcula el TF de la palabra y se agrega al diccionario de TF del query
+                Query_TF.Add(QueryWords[i], Counter(QueryWords[i], QueryWords)/QueryWords.Length);     
+            }
         }
-        public void QueryTFIDF(){
-            void QueryTF(){
-                for (int i = 0; i < QueryWords.Length; i++)
-                {
-                    if (Query_TF.ContainsKey(QueryWords[i]) != true)
-                    {
-                        Query_TF.Add(QueryWords[i], Counter(QueryWords[i], QueryWords)/QueryWords.Length);     
-                    }
-                }
+    }
+    //Función para calcular IDF del query
+    void QueryIDF(){
+        double cantidad_total_documentos = this.Names.Length;
+        for (int i = 0; i < QueryWords.Length; i++)
+        {
+            //Se calcula el IDF de la palabra y se agrega al diccionario de IDF del query
+            double idf = Math.Log(cantidad_total_documentos+1/WhereExist(QueryWords[i], this.NameVSWorsd, this.Names)+1);
+            if (Query_IDF.ContainsKey(QueryWords[i]) != true)
+            {
+                Query_IDF.Add(QueryWords[i], idf);
             }
-            void QueryIDF(){
-                double cantidad_total_documentos = this.Names.Length;
-                for (int i = 0; i < QueryWords.Length; i++)
-                {
-                    double idf = Math.Log(cantidad_total_documentos+1/WhereExist(QueryWords[i], this.NameVSWorsd, this.Names)+1);
-                    if (Query_IDF.ContainsKey(QueryWords[i]) != true)
-                    {
-                        Query_IDF.Add(QueryWords[i], idf);
-                    }
-                }
-            }
-            void QueryMultTFIDF(){
-                for (int i = 0; i < QueryWords.Length; i++)
-                {
-                    double tf = Query_TF[QueryWords[i]];
-                    double idf = Query_IDF[QueryWords[i]];
-                    double tfidf = tf*idf;
-                    //hacer un condicional y solo agregar las palabras al diccionario del query si la palabra existe en el query y en los documentos
-                    if (idf < 50)
-                    {
-                        if (Query_TFIDF.ContainsKey(QueryWords[i]) != true)
-                        {
-                            Query_TFIDF.Add(QueryWords[i], tfidf);
-                        }   
-                    }
-                }
-            }
-            QueryTF();
-            QueryIDF();
-            QueryMultTFIDF();
         }
+    }
+    //Función para calcular TFIDF del query
+    void QueryMultTFIDF(){
+        for (int i = 0; i < QueryWords.Length; i++)
+        {
+            double tf = Query_TF[QueryWords[i]];
+            double idf = Query_IDF[QueryWords[i]];
+            double tfidf = tf*idf;
+            //Se agrega la palabra al diccionario de TFIDF del query si la palabra existe en el query y en los documentos
+            if (idf < 50)
+            {
+                if (Query_TFIDF.ContainsKey(QueryWords[i]) != true)
+                {
+                    Query_TFIDF.Add(QueryWords[i], tfidf);
+                }   
+            }
+        }
+    }
+    //Se llaman las funciones para calcular TF, IDF y TFIDF del query
+    QueryTF();
+    QueryIDF();
+    QueryMultTFIDF();
+    }
         public void CosSimilitude(){
             void Similitude(){
                 //Sacar los tfidf que tienen las palabras del query en la bd en caso de que existan
@@ -298,9 +347,14 @@ namespace TF_IDF
                 //calcular el snipet con 4 palabras antes y 4 despues de la palabra clave
                 foreach (var item in this.Results.Values)
                 {
+                    // Obtener las palabras y palabras no repetidas del elemento actual
                     string[] words = this.NameVSWorsd[item];
                     string[] unrepeatedwords = this.NameVSUnrepeatedWords[item];
+
+                    // Crear un arreglo de 8 elementos para almacenar el snipet
                     string[] snipet = new string[8];
+
+                    // Buscar la posición de la palabra clave en el arreglo de palabras
                     int index = 0;
                     for (int i = 0; i < words.Length; i++)
                     {
@@ -310,6 +364,8 @@ namespace TF_IDF
                             break;
                         }
                     }
+    
+                    // Si la posición es menor a 4, tomar las primeras 8 palabras del arreglo
                     if (index - 4 < 0)
                     {
                         for (int i = 0; i < 8; i++)
@@ -317,6 +373,7 @@ namespace TF_IDF
                             snipet[i] = words[i];
                         }
                     }
+                    // Si la posición es mayor a la longitud del arreglo menos 4, tomar las últimas 8 palabras del arreglo
                     else if (index + 4 > words.Length)
                     {
                         for (int i = words.Length - 8; i < words.Length; i++)
@@ -324,6 +381,7 @@ namespace TF_IDF
                             snipet[i] = words[i];
                         }
                     }
+                    // Si la posición está en el rango adecuado, tomar las 4 palabras antes y 4 palabras después de la palabra clave
                     else
                     {
                         int contador = 0;
@@ -333,21 +391,30 @@ namespace TF_IDF
                             contador++;
                         }
                     }
+
+                    // Unir el arreglo de snipet en una sola cadena de texto
                     string snipetvar = string.Join(" ", snipet);
+
+                    // Agregar el snipet al diccionario Snippet con el identificador del elemento
                     this.Snippet.Add(item, snipetvar);
-                }
+            }
         }
         Similitude();
         }
+        
         public void TFIDF(){
+            // Iniciar un cronómetro para medir el tiempo de ejecución
             Stopwatch crono = new Stopwatch();
             crono.Start();
             TF();
             IDF();
             MultTFIDF();
+            // Detener el cronómetro y calcular el tiempo de ejecución en segundos
             crono.Stop();
             float time = crono.ElapsedMilliseconds / 1000;
-            System.Console.WriteLine($"\nIFIDF Calculado Con Exito  - {time}/s ✅");
+
+            // Imprimir un mensaje indicando que el cálculo de TFIDF se ha completado con éxito y el tiempo de ejecución
+            System.Console.WriteLine($"nIFIDF Calculado Con Exito  - {time}/s ✅");
         }
     }
 }
