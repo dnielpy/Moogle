@@ -13,4 +13,4 @@ El objetivo de Moogle! es realizar búsquedas en el interior de varios archivos 
 
 Desde el terminal, una vez ejecutado e proyecto, podrá ver el proceso de carga de la base de datos. El cual no debería demorar mas de unos pocos segundos. Claro, todo dependerá de la cantidad de archivos .txt que usted tenga en la carpeta Content. Pero para una base de datos de 50 mb de archivos .txt (alrededor de 30) el algoritmo solo demora entre 4 a 6 segundos en cargar estos. La carga de la base de datos solo se realiza en la primera búsqueda que usted realice, luego se almacena en memoria, por lo que esta primera búsqueda demorará unos pocos segundos más que las siguientes que usted realice. 
 
-
+El resto es bastante intuitivo, solo escriba su término de búsqueda y el programa se encargará de hacer el resto.
