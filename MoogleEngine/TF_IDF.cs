@@ -299,7 +299,10 @@ namespace TF_IDF
                     {
                         if (Name_Words_TFIDF[name].ContainsKey(queryword))
                         {
-                            MultTFIDF.Add(queryword,Name_Words_TFIDF[name][queryword] * Query_TFIDF[queryword]);
+                            if (MultTFIDF.ContainsKey(queryword) == false)
+                            {
+                                MultTFIDF.Add(queryword,Name_Words_TFIDF[name][queryword] * Query_TFIDF[queryword]);
+                            }
                         }
                     }
                     double sum = 0;
