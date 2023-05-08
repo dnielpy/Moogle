@@ -15,7 +15,6 @@ class txtData
         Names = new string[Paths.Length];
         string[] Words; 
         string[] UnrepeatedWords;
-        Dictionary<string, int> TokenizedWords;
     }
     private string MyPath{get;set;}
     private string TextVar{get;set;}
@@ -25,7 +24,6 @@ class txtData
     public string[] Names{get;set;}
     public string[] Words{get;set;}
     public string[] UnrepeatedWords{get;set;}
-    public Dictionary<string, int> TokenizedWords = new Dictionary<string, int>();
     public Dictionary<string, string[]> NamesvsWords = new Dictionary<string, string[]>();
     public Dictionary<string, string[]> NamesvsUnrepeatedWords = new Dictionary<string, string[]>();
 
