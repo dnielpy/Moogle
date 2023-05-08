@@ -1,4 +1,4 @@
-[title](https://user-images.githubusercontent.com/132395021/236914673-939b48c5-b927-4184-99c8-5d9dbb1716ad.png)
+#Moogle!
 
 "Moogle!" es una aplicación web cuyo objetivo es realizar búsquedas en una base de 
 datos de archivos .txt y devolver los resultados en el menor tiempo posible. Para esto, se 
