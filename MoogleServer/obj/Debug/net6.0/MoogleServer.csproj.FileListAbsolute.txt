@@ -54,7 +54,7 @@ C:\Users\dnielpy\Documents\Code\GitHub\Moogle!\Moogle\MoogleServer\obj\Debug\net
 C:\Users\dnielpy\Documents\Code\GitHub\Moogle!\Moogle\MoogleServer\obj\Debug\net6.0\scopedcss\projectbundle\MoogleServer.bundle.scp.css
 C:\Users\dnielpy\Documents\Code\GitHub\Moogle!\Moogle\MoogleServer\obj\Debug\net6.0\MoogleServer.csproj.CopyComplete
 C:\Users\dnielpy\Documents\Code\GitHub\Moogle!\Moogle\MoogleServer\obj\Debug\net6.0\MoogleServer.dll
-C:\Users\dnielpy\Documents\Code\GitHub\Moogle!\Moogle\MoogleServer\obj\Debug\net6.0\refint\MoogleServer.dll
 C:\Users\dnielpy\Documents\Code\GitHub\Moogle!\Moogle\MoogleServer\obj\Debug\net6.0\MoogleServer.pdb
 C:\Users\dnielpy\Documents\Code\GitHub\Moogle!\Moogle\MoogleServer\obj\Debug\net6.0\MoogleServer.genruntimeconfig.cache
 C:\Users\dnielpy\Documents\Code\GitHub\Moogle!\Moogle\MoogleServer\obj\Debug\net6.0\ref\MoogleServer.dll
+C:\Users\dnielpy\Documents\Code\GitHub\Moogle!\Moogle\MoogleServer\obj\Debug\net6.0\refint\MoogleServer.dll

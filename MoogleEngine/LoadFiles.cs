@@ -60,6 +60,8 @@ class txtData
             
             // Eliminamos la extensión de archivo ".txt"
             this.Names[i] = this.Names[i].Replace(".txt", "");
+            this.Names[i] = this.Names[i].Replace(@"\", "");
+
         }
     }
     // Devolvemos la matriz de nombres actualizada
@@ -81,7 +83,7 @@ class txtData
     // Este método toma el arreglo de textos this.Texts y devuelve todas las palabras de estos textos
     private String[] GetWords(){     
         // Se define un arreglo de caracteres que se utilizarán como delimitadores para separar las palabras
-        char[] delimeters = new char[] {' ', '.', ',', ';', ':', '!', '?'};
+        char[] delimeters = new char[] {' ', '.', ',', ';', ':', '!', '?', '—', '_', '"'};
         string TextVar = "";
         // Se recorre el arreglo de textos this.Texts
         for (int i = 0; i < this.Texts.Length; i++)

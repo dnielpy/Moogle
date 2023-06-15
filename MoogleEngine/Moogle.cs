@@ -71,7 +71,6 @@ public static class Moogle
         {
             items.Add(new SearchItem(item.Value, DocumentvsSnipet[item.Value], (float)item.Key));
         }
-        
         // Convertir la lista de objetos SearchItem en un arreglo de objetos SearchItem.
         SearchItem[] items2 = items.ToArray();
 

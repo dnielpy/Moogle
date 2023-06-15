@@ -29,7 +29,6 @@ namespace TF_IDF
         //Resultados
         public Dictionary<double, string> Results = new Dictionary<double, string>();
         public Dictionary<string, string> Snippet = new Dictionary<string, string>();
-
         public tfidf(Dictionary<string, string[]> namevswords, Dictionary<string, string[]> namevsunrepeatedwords, string[] names){
             //Diccionarios del tfidf normal
             Dictionary<string, Dictionary<string, double>> Name_Words_TF;
@@ -80,7 +79,7 @@ namespace TF_IDF
        }
 
         public void TF(){ 
-    //        System.Console.WriteLine("\nCalculando TF en los siguientes Documentos:");
+        //System.Console.WriteLine("\nCalculando TF en los siguientes Documentos:");
             // Crear un diccionario para almacenar el número de ocurrencias de cada palabra en el documento
             Dictionary<string, double> wordCounts = new Dictionary<string, double>();
             // Inicializar la longitud del documento
@@ -124,14 +123,14 @@ namespace TF_IDF
                     nameVsTF[word] = tf;
                 }
                 // Imprimir el nombre del documento
-    //            System.Console.WriteLine(name);
+        //System.Console.WriteLine(name);
                 // Almacenar el diccionario de TF para el documento
                 this.Name_Words_TF.Add(name, nameVsTF); 
             }  
         }
         public void IDF(){
             // Imprimir mensaje de inicio
-    //        System.Console.WriteLine("\nCalculando IDF en los siguientes Documentos:");
+        //System.Console.WriteLine("\nCalculando IDF en los siguientes Documentos:");
             // Crear un diccionario para almacenar el número de documentos que contienen cada palabra
             Dictionary<string, int> wordCounts = new Dictionary<string, int>();
             // Crear un diccionario para almacenar el IDF de cada palabra
@@ -185,7 +184,7 @@ namespace TF_IDF
                 }
 
                 // Imprimir el nombre del documento
-    //            System.Console.WriteLine(name);
+        //System.Console.WriteLine(name);
                 // Almacenar el diccionario de IDF para el documento
                 this.Name_Words_IDF.Add(name, nameVsIDF);
             }
@@ -193,7 +192,7 @@ namespace TF_IDF
 
         public Dictionary<string, Dictionary<string, double>> MultTFIDF(){
             // Imprimir mensaje de inicio
-    //        System.Console.WriteLine("\nMultiplicando valores TFIDF en los siguientes documentos:");
+        //System.Console.WriteLine("\nMultiplicando valores TFIDF en los siguientes documentos:");
             // Iterar sobre cada documento
             for (int i = 0; i < this.Names.Length; i++)
             {
@@ -219,7 +218,7 @@ namespace TF_IDF
                 // Almacenar el diccionario de TFIDF para el documento
                 this.Name_Words_TFIDF.Add(this.Names[i], WordsvsTFIDF);
                 // Imprimir el nombre del documento
-    //            System.Console.WriteLine(this.Names[i]);
+        //System.Console.WriteLine(this.Names[i]);
             }
             // Devolver el diccionario de TFIDF para todos los documentos
             return this.Name_Words_TFIDF;
@@ -341,7 +340,10 @@ namespace TF_IDF
                 {
                     if (CosSimilitud[score] > 0)
                     {
-                        this.Results.Add(CosSimilitud[score], score);
+                        if (!this.Results.ContainsKey(CosSimilitud[score]))
+                        {
+                            this.Results.Add(CosSimilitud[score], score);
+                        }
                     }
                 }
                 
@@ -403,7 +405,6 @@ namespace TF_IDF
         }
         Similitude();
         }
-
         public void TFIDF(){
             // Iniciar un cronómetro para medir el tiempo de ejecución
             Stopwatch crono = new Stopwatch();
