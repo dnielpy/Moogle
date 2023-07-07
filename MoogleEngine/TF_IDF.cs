@@ -333,16 +333,17 @@ namespace TF_IDF
                     CosSimilitud[name] = Similitud[name] / CosSimilitud[name];
                 }
                 //Ordenar los valores de mayor a menor
-                var items = from pair in CosSimilitud
+            /*    var items = from pair in CosSimilitud
                             orderby pair.Value descending
                             select pair;
+            */
                 foreach (var score in CosSimilitud.Keys)
                 {
                     if (CosSimilitud[score] > 0)
                     {
                         if (!this.Results.ContainsKey(CosSimilitud[score]))
                         {
-                            this.Results.Add(CosSimilitud[score], score);
+                        this.Results.Add(CosSimilitud[score], score);
                         }
                     }
                 }
@@ -369,10 +370,10 @@ namespace TF_IDF
                         }
                     }
     
-                    // Si la posición es menor a 4, tomar las primeras 8 palabras del arreglo
+                    // Si la posición es menor a 4, tomar las primeras 8 palabras del arreglo               
                     if (index - 4 < 0)
                     {
-                        for (int i = 0; i < 8; i++)
+                        for (int i = 0; i < words.Length; i++)
                         {
                             snipet[i] = words[i];
                         }
