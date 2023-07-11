@@ -27,7 +27,16 @@ class txtData
     public Dictionary<string, string[]> NamesvsWords = new Dictionary<string, string[]>();
     public Dictionary<string, string[]> NamesvsUnrepeatedWords = new Dictionary<string, string[]>();
 
+
+
+    private void FakeData(){
+        string[] fakewords = {"test"};
+        NamesvsWords.Add("test", fakewords);
+        NamesvsUnrepeatedWords.Add("test", fakewords);
+    }
+
     private String[] GetPaths(){
+        
     //Devuelve la ruta de todos los archivos de texto en 'this.AllFilesPaths'
     for (int i = 0; i < this.AllFilesPaths.Length; i++)
     {
@@ -44,6 +53,7 @@ class txtData
 
     // Este método obtiene los nombres de los archivos a partir de sus rutas
     private String[] GetNames(){
+    
     // Iteramos a través de la matriz de rutas
     for (int i = 0; i < this.Paths.Length; i++)
     {
@@ -126,6 +136,7 @@ class txtData
         System.Console.WriteLine("🔋--- Inicializando Moogle ---🔋");
         System.Console.WriteLine("Cargando Datos...0% ⏳");
         // Se llaman a los métodos GetPaths, GetTexts, GetNames, GetWords y CleanWords para obtener los datos necesarios
+        FakeData();
         GetPaths();
         System.Console.WriteLine("Cargando Datos...10% ⏳");
         GetTexts();

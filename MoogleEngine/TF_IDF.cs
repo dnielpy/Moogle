@@ -56,6 +56,7 @@ namespace TF_IDF
               return words.Count(w => w == word);
     }
 
+
     // Este método cuenta la cantidad de documentos en los que aparece una palabra
     public double WhereExist(string word, Dictionary<string, string[]> NombrevsPalabras, string[] Names){
         double DocumentosDodeExiste = 0;
@@ -127,6 +128,10 @@ namespace TF_IDF
                 // Almacenar el diccionario de TF para el documento
                 this.Name_Words_TF.Add(name, nameVsTF); 
             }  
+//aki
+            Dictionary<string, double> fakenameVsTF = new Dictionary<string, double>();
+            fakenameVsTF.Add("test", 0);
+            this.Name_Words_TF.Add("x", fakenameVsTF);
         }
         public void IDF(){
             // Imprimir mensaje de inicio
@@ -188,6 +193,9 @@ namespace TF_IDF
                 // Almacenar el diccionario de IDF para el documento
                 this.Name_Words_IDF.Add(name, nameVsIDF);
             }
+            Dictionary<string, double> fakenameVsIDF = new Dictionary<string, double>();
+            fakenameVsIDF.Add("test", 0);
+            this.Name_Words_IDF.Add("x", fakenameVsIDF);
         }
 
         public Dictionary<string, Dictionary<string, double>> MultTFIDF(){
@@ -220,6 +228,10 @@ namespace TF_IDF
                 // Imprimir el nombre del documento
         //System.Console.WriteLine(this.Names[i]);
             }
+            Dictionary<string, double> fakenameVsTFIDF = new Dictionary<string, double>();
+            fakenameVsTFIDF.Add("test", 0);
+            this.Name_Words_TFIDF.Add("x", fakenameVsTFIDF);
+            
             // Devolver el diccionario de TFIDF para todos los documentos
             return this.Name_Words_TFIDF;
         } 
@@ -333,10 +345,10 @@ namespace TF_IDF
                     CosSimilitud[name] = Similitud[name] / CosSimilitud[name];
                 }
                 //Ordenar los valores de mayor a menor
-            /*    var items = from pair in CosSimilitud
+                var items = from pair in CosSimilitud
                             orderby pair.Value descending
                             select pair;
-            */
+            
                 foreach (var score in CosSimilitud.Keys)
                 {
                     if (CosSimilitud[score] > 0)
@@ -404,6 +416,7 @@ namespace TF_IDF
                     this.Snippet.Add(item, snipetvar);
             }
         }
+        
         Similitude();
         }
         public void TFIDF(){
