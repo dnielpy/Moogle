@@ -11,8 +11,8 @@ class txtData
         MyPath = path;        //Should have this value => "/home/dnielpy/Documentos/Code/Projects/Moogle/MoogleTest/Database";
         AllFilesPaths = Directory.GetFiles(this.MyPath);  // => This add all the paths of ALL file on the directory
         Paths = new string[AllFilesPaths.Length];  // => This have only paths of txt files
-        Texts = new string[Paths.Length];  // => This contains all Texts of .txt files
-        Names = new string[Paths.Length];
+        Texts = new string[Paths.Length +1];  // => This contains all Texts of .txt files
+        Names = new string[Paths.Length + 1];
         string[] Words; 
         string[] UnrepeatedWords;
     }
@@ -74,6 +74,7 @@ class txtData
 
         }
     }
+    Names[Names.Length - 1] = "test";
     // Devolvemos la matriz de nombres actualizada
     return this.Names;
     }
@@ -87,6 +88,7 @@ class txtData
                 this.Texts[i] = this.Texts[i].ToLower();
             }
         }
+        Texts[Texts.Length - 1] = "test";
         return this.Texts;
     }
 
@@ -136,7 +138,7 @@ class txtData
         System.Console.WriteLine("🔋--- Inicializando Moogle ---🔋");
         System.Console.WriteLine("Cargando Datos...0% ⏳");
         // Se llaman a los métodos GetPaths, GetTexts, GetNames, GetWords y CleanWords para obtener los datos necesarios
-        FakeData();
+    //    FakeData();
         GetPaths();
         System.Console.WriteLine("Cargando Datos...10% ⏳");
         GetTexts();
