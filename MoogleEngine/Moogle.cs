@@ -116,8 +116,16 @@ public static class Moogle
             
             return suggestion;
         }
+        string suggestion = Suggestion(query);
 
+        if (query == suggestion)
+        {
+            return new SearchResult(items2);
+        }
+        else
+        {
         // Devolver un objeto SearchResult que contiene los resultados de la búsqueda.
-        return new SearchResult(items2, Suggestion(query));
+        return new SearchResult(items2, Suggestion(query));            
+        }
     }
 }
