@@ -1,0 +1,12 @@
+C:\Users\dnielpy\Documents\Code\GitHub\Moogle!\Moogle\MoogleEngine\bin\Release\net6.0\MoogleEngine.deps.json
+C:\Users\dnielpy\Documents\Code\GitHub\Moogle!\Moogle\MoogleEngine\bin\Release\net6.0\MoogleEngine.dll
+C:\Users\dnielpy\Documents\Code\GitHub\Moogle!\Moogle\MoogleEngine\bin\Release\net6.0\ref\MoogleEngine.dll
+C:\Users\dnielpy\Documents\Code\GitHub\Moogle!\Moogle\MoogleEngine\bin\Release\net6.0\MoogleEngine.pdb
+C:\Users\dnielpy\Documents\Code\GitHub\Moogle!\Moogle\MoogleEngine\obj\Release\net6.0\MoogleEngine.csproj.AssemblyReference.cache
+C:\Users\dnielpy\Documents\Code\GitHub\Moogle!\Moogle\MoogleEngine\obj\Release\net6.0\MoogleEngine.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\dnielpy\Documents\Code\GitHub\Moogle!\Moogle\MoogleEngine\obj\Release\net6.0\MoogleEngine.AssemblyInfoInputs.cache
+C:\Users\dnielpy\Documents\Code\GitHub\Moogle!\Moogle\MoogleEngine\obj\Release\net6.0\MoogleEngine.AssemblyInfo.cs
+C:\Users\dnielpy\Documents\Code\GitHub\Moogle!\Moogle\MoogleEngine\obj\Release\net6.0\MoogleEngine.csproj.CoreCompileInputs.cache
+C:\Users\dnielpy\Documents\Code\GitHub\Moogle!\Moogle\MoogleEngine\obj\Release\net6.0\MoogleEngine.dll
+C:\Users\dnielpy\Documents\Code\GitHub\Moogle!\Moogle\MoogleEngine\obj\Release\net6.0\ref\MoogleEngine.dll
+C:\Users\dnielpy\Documents\Code\GitHub\Moogle!\Moogle\MoogleEngine\obj\Release\net6.0\MoogleEngine.pdb

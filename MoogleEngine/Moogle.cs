@@ -76,7 +76,48 @@ public static class Moogle
 
         System.Console.WriteLine("🔋--- Busqueda Realizada Con Exito ---🔋");
 
+        static string Suggestion(string query){
+            string suggestion = "";
+
+            //Implementar la distancia de Levenshtein para sugerir una palabra entre las palabras de la consulta y las palabras de los documentos.
+            static int LevenshteinDistance(string s1, string s2)
+            {
+                int m = s1.Length;
+                int n = s2.Length;
+                int[,] dp = new int[m + 1, n + 1];
+
+                for (int i = 0; i <= m; i++)
+                    dp[i, 0] = i;
+
+                for (int j = 0; j <= n; j++)
+                    dp[0, j] = j;
+
+                for (int i = 1; i <= m; i++)
+                {
+                    for (int j = 1; j <= n; j++)
+                    {
+                        if (s1[i - 1] == s2[j - 1])
+                            dp[i, j] = dp[i - 1, j - 1];
+                        else
+                            dp[i, j] = 1 + Math.Min(dp[i - 1, j], Math.Min(dp[i, j - 1], dp[i - 1, j - 1]));
+                    }
+                }
+                return dp[m, n];
+            }
+            
+            int[] Distancias = new int [objeto1.Words.Length];
+            for (int i = 0; i < objeto1.Words.Length; i++)
+            {
+                Distancias[i] = LevenshteinDistance(query, objeto1.Words[i]);
+            }
+            int min = Distancias.Min();
+            int index = Array.IndexOf(Distancias, min);
+            suggestion = objeto1.Words[index];
+            
+            return suggestion;
+        }
+
         // Devolver un objeto SearchResult que contiene los resultados de la búsqueda.
-        return new SearchResult(items2);
+        return new SearchResult(items2, Suggestion(query));
     }
 }
