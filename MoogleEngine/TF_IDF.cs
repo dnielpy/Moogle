@@ -385,10 +385,21 @@ namespace TF_IDF
                     // Si la posición es menor a 4, tomar las primeras 8 palabras del arreglo               
                     if (index - 4 < 0)
                     {
-                        for (int i = 0; i < words.Length; i++)
+                        if (index == 0)
                         {
-                            snipet[i] = words[i];
+                            for (int i = 0; i < 4; i++)
+                            {
+                                snipet[i] = words[i];
+                            }
                         }
+                        else
+                        {
+                            for (int i = 0; i < words.Length; i++)
+                            {
+                            snipet[i] = words[i];
+                            }    
+                        }
+                        
                     }
                     // Si la posición es mayor a la longitud del arreglo menos 4, tomar las últimas 8 palabras del arreglo
                     else if (index + 4 > words.Length)

@@ -119,7 +119,8 @@ public static class Moogle
         string suggestion = Suggestion(query);
 
         if (query == suggestion)
-        {
+        {   
+            SearchItem[] items4 = items2;
             return new SearchResult(items2);
         }
         else
