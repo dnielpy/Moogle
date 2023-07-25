@@ -142,7 +142,7 @@ elif [ $var = "show_report" ]; then
 
 elif [ $var = "show_slides" ]; then
     clear
-    show_report
+    show_slides
 
 elif [ $var = "clean" ]; then
     clear
@@ -171,7 +171,7 @@ elif [ $1 = "show_report" ]; then
 
 elif [ $1 = "show_slides" ]; then
     clear
-    show_report
+    show_slides
 
 elif [ $1 = "clean" ]; then
     clear
