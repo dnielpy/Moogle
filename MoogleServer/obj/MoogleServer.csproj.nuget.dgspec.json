@@ -1,27 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\dnielpy\\Documents\\Code\\GitHub\\Moogle!\\Moogle\\MoogleServer\\MoogleServer.csproj": {}
+    "/mnt/c/Users/dnielpy/Documents/Code/GitHub/Moogle!/Moogle/MoogleServer/MoogleServer.csproj": {}
   },
   "projects": {
-    "C:\\Users\\dnielpy\\Documents\\Code\\GitHub\\Moogle!\\Moogle\\MoogleEngine\\MoogleEngine.csproj": {
+    "/mnt/c/Users/dnielpy/Documents/Code/GitHub/Moogle!/Moogle/MoogleEngine/MoogleEngine.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\dnielpy\\Documents\\Code\\GitHub\\Moogle!\\Moogle\\MoogleEngine\\MoogleEngine.csproj",
+        "projectUniqueName": "/mnt/c/Users/dnielpy/Documents/Code/GitHub/Moogle!/Moogle/MoogleEngine/MoogleEngine.csproj",
         "projectName": "MoogleEngine",
-        "projectPath": "C:\\Users\\dnielpy\\Documents\\Code\\GitHub\\Moogle!\\Moogle\\MoogleEngine\\MoogleEngine.csproj",
-        "packagesPath": "C:\\Users\\dnielpy\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\dnielpy\\Documents\\Code\\GitHub\\Moogle!\\Moogle\\MoogleEngine\\obj\\",
+        "projectPath": "/mnt/c/Users/dnielpy/Documents/Code/GitHub/Moogle!/Moogle/MoogleEngine/MoogleEngine.csproj",
+        "packagesPath": "/home/dnielpy/.nuget/packages/",
+        "outputPath": "/mnt/c/Users/dnielpy/Documents/Code/GitHub/Moogle!/Moogle/MoogleEngine/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\dnielpy\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "/home/dnielpy/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -55,36 +53,34 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.407\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/mnt/c/Users/dnielpy/Documents/.dotnet/sdk/6.0.412/RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\dnielpy\\Documents\\Code\\GitHub\\Moogle!\\Moogle\\MoogleServer\\MoogleServer.csproj": {
+    "/mnt/c/Users/dnielpy/Documents/Code/GitHub/Moogle!/Moogle/MoogleServer/MoogleServer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\dnielpy\\Documents\\Code\\GitHub\\Moogle!\\Moogle\\MoogleServer\\MoogleServer.csproj",
+        "projectUniqueName": "/mnt/c/Users/dnielpy/Documents/Code/GitHub/Moogle!/Moogle/MoogleServer/MoogleServer.csproj",
         "projectName": "MoogleServer",
-        "projectPath": "C:\\Users\\dnielpy\\Documents\\Code\\GitHub\\Moogle!\\Moogle\\MoogleServer\\MoogleServer.csproj",
-        "packagesPath": "C:\\Users\\dnielpy\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\dnielpy\\Documents\\Code\\GitHub\\Moogle!\\Moogle\\MoogleServer\\obj\\",
+        "projectPath": "/mnt/c/Users/dnielpy/Documents/Code/GitHub/Moogle!/Moogle/MoogleServer/MoogleServer.csproj",
+        "packagesPath": "/home/dnielpy/.nuget/packages/",
+        "outputPath": "/mnt/c/Users/dnielpy/Documents/Code/GitHub/Moogle!/Moogle/MoogleServer/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\dnielpy\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "/home/dnielpy/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\dnielpy\\Documents\\Code\\GitHub\\Moogle!\\Moogle\\MoogleEngine\\MoogleEngine.csproj": {
-                "projectPath": "C:\\Users\\dnielpy\\Documents\\Code\\GitHub\\Moogle!\\Moogle\\MoogleEngine\\MoogleEngine.csproj"
+              "/mnt/c/Users/dnielpy/Documents/Code/GitHub/Moogle!/Moogle/MoogleEngine/MoogleEngine.csproj": {
+                "projectPath": "/mnt/c/Users/dnielpy/Documents/Code/GitHub/Moogle!/Moogle/MoogleEngine/MoogleEngine.csproj"
               }
             }
           }
@@ -117,7 +113,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.407\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/mnt/c/Users/dnielpy/Documents/.dotnet/sdk/6.0.412/RuntimeIdentifierGraph.json"
         }
       }
     }

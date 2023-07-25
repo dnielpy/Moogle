@@ -1,15 +1,6 @@
 {
   "ExpandedNodes": [
-    "",
-    "\\MoogleEngine\\bin",
-    "\\MoogleEngine\\bin\\Debug\\net6.0",
-    "\\MoogleEngine\\bin\\Debug\\net7.0",
-    "\\MoogleEngine\\obj\\Debug",
-    "\\MoogleEngine\\obj\\Debug\\net6.0",
-    "\\MoogleServer\\bin",
-    "\\MoogleServer\\bin\\Debug\\net6.0",
-    "\\MoogleServer\\obj\\Debug"
+    ""
   ],
-  "SelectedNode": "\\MoogleServer",
   "PreviewInSolutionExplorer": false
 }

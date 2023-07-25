@@ -1,0 +1,241 @@
+\documentclass{article}
+
+% Paquetes adicionales para mejorar el diseño y las fuentes
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{fancyhdr}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{listings}
+\usepackage{lipsum}
+\usepackage{tikz}
+\usepackage{float}
+
+% Configuración de encabezado y pie de página
+\pagestyle{fancy}
+\fancyhf{}
+\cfoot{\thepage}
+
+% Configuración de colores personalizados
+\definecolor{keywordcolor}{RGB}{0,0,128}
+\definecolor{stringcolor}{RGB}{0,128,0}
+\definecolor{commentcolor}{RGB}{128,128,128}
+\definecolor{backgroundcolor}{RGB}{245,245,245}
+\definecolor{graphcolor}{RGB}{0,128,128}
+
+% Estilo personalizado para mostrar código
+\lstset{
+  backgroundcolor=\color{backgroundcolor},
+  basicstyle=\footnotesize\ttfamily,
+  breakatwhitespace=false,
+  breaklines=true,
+  captionpos=b,
+  commentstyle=\color{commentcolor},
+  extendedchars=true,
+  frame=single,
+  keywordstyle=\color{keywordcolor},
+  language=TeX,
+  numbers=left,
+  numbersep=5pt,
+  numberstyle=\tiny\color{gray},
+  showspaces=false,
+  showstringspaces=false,
+  showtabs=false,
+  stringstyle=\color{stringcolor},
+  tabsize=2,
+  title=\lstname
+}
+
+\begin{document}
+
+\title{\textcolor{graphcolor}{\textbf{\Huge{Moogle!}}}}
+\author{\LARGE{\textcolor{graphcolor}{Reynaldo Daniel Quesada García - C111}}}
+
+\maketitle
+
+\newpage
+
+\begin{center}
+\section*{\textcolor{graphcolor}{{\centering ¿Qué es Moogle?}}}
+
+Moogle! es una aplicación web cuyo objetivo es realizar búsquedas en una base de 
+datos de archivos .txt y devolver los resultados en el menor tiempo posible. Para esto, se 
+utilizan algoritmos de TF-IDF y otros conocimientos de álgebra lineal que hacen más 
+eficiente el buscador.
+
+\section*{\textcolor{graphcolor}{{\centering ¿Cómo ejecutar el proyecto?}}}
+
+Dentro de la carpeta Script, se encuentra un pequeño script para bash encargado de ejecutar el proyecto (Asi como este PDF y el de la presentación). Los comandos para ejecutar el script son:
+\\run - Compila y ejecuta el proyecto
+\\report - Compila el latex del informe
+\\slides - Compila el latex de la presentación
+\\show-report - Revisa a ver si ya está creado el pdf del informe, y sinó, ejecuta report (compila el latex)
+\\show-slides - Revisa a ver si ya está creado el pdf de la presentacion, y sinó, ejecuta slides (compila el latex)
+\\clean - Limpia de las carpetas Presentacion e Informe todo lo que no sea .tex
+
+
+\newpage
+
+\section*{\textcolor{graphcolor}{{\centering ¿Cómo Funciona?}}}
+
+El objetivo de Moogle! es realizar búsquedas en el interior de varios archivos .txt y en 
+función del contenido de los mismos, mostrar los resultados más relevantes de acuerdo a 
+la búsqueda que usted haya realizado. Para esto, usted debe copiar los archivos .txt a los 
+cuales quiera realizarle la búsqueda en la carpeta Content que aparece en la raiz del 
+proyecto.  En cuanto a la cantidad máxima de documentos para trabajar, es ilimitada, no debería tener 
+ningún problema.
+Desde el terminal, una vez ejecutado e proyecto, podrá ver este proceso de carga de la 
+base de datos. El cual no debería demorar mas de unos pocos segundos. Claro, todo 
+dependerá de la cantidad de archivos .txt que usted tenga en la carpeta Content. Pero 
+para una base de datos de 50 mb de archivos .txt (alrededor de 30 libros con miles de 
+palabras) el algoritmo solo demora entre 4 a 6 segundos en cargar estos.
+
+
+
+\newpage
+\section*{\textcolor{graphcolor}{{\centering Algoritmo TF-IDF}}}
+\addcontentsline{toc}{subsection}{Motor de búsqueda}
+
+
+\begin{equation}
+	TFIDF = (\frac{tf}{tw}) \times \log(\frac{td}{dt})
+\end{equation}
+
+Donde las variables llevan consigo los siguientes significado :
+\begin{itemize}
+	\item $tf$ es la frecuencia del término en el documento actual.
+	\item $tw$ es la cantidad de palabras totales en el documento actual.
+	\item $td$ es la cantidad total de documentos a analizar.
+	\item $dt$ es la cantidad de documentos que contienen el término.
+\end{itemize}
+
+
+Después de hacer lo anterior necesitamos calcular la ``similitud'' entre el
+vector {\it document} y el vector {\it query} para lo cual se hace uso de {\it
+		Cosine Similarity}. La idea es intentar estimar el ``ángulo'' comprendido entre
+el vector {\it query} y el vector {\it document}: mientras menor sea este
+ángulo, mayor ``similitud'' tendrán estos vectores. Para lo anterior se hace
+uso de la fórmula:
+
+Imagina que estás en un mundo mágico donde los documentos y las consultas son representados por flechas en el espacio.
+ Cada flecha apunta en una dirección diferente, y cuanto más cerca estén las flechas, más similares serán los {\it documentos} y {\it las consultas} que representan.
+ ¿Cómo podríamos medir la {\it similitud} entre estas flechas? ¡Con la{ \it similitud del coseno}, por supuesto!
+
+La {\it similitud del coseno} nos permite calcular el ángulo entre dos flechas, que representan el {\it documento} y {\it la consulta}.
+ Cuanto menor sea este ángulo, mayor será la {\it similitud} entre ellos. Para calcular la {\it similitud del coseno}, utilizamos la siguiente fórmula mágica:
+
+\begin{equation}
+	\cos \alpha = \frac{v_d \cdot v_q}{||v_d|| ~ ||v_q||}
+\end{equation}
+
+Donde las variables llevan consigo los siguientes significado :
+
+\begin{itemize}
+	\item $v_d$ el vector de {\it document}
+	\item $v_q$ el vector de {\it query}
+	\item $||v||$ es la magnitud del vector $v$
+\end{itemize}
+
+\newpage
+
+\section*{\textcolor{graphcolor}{{\centering Tiempos de carga}}}
+
+La carga de la base de datos solo se realiza en la primera búsqueda que usted realice, luego se 
+almacena en memoria, por lo que esta primera búsqueda demorará unos pocos segundos
+más que las siguientes que usted realice. El gráfico representa la cantidad de tiempo que demora la primera busqueda (Tiempo de carga A) con respecto al tiempo que demoran las siquientes búsquedas
+
+\begin{figure}[H]
+  \centering
+  \begin{tikzpicture}
+    \draw[fill=graphcolor] (0,0) rectangle (2,4);
+    \draw[fill=graphcolor!25] (4.4,0) rectangle (6.4,2);
+    \draw (1,4) node[above] {Tiempo de carga A};
+    \draw (5.4,2) node[above] {Tiempo de carga B};
+  \end{tikzpicture}
+  \caption{Representación de los tiempos de carga de la primera búsqueda y el resto}
+  \label{fig:grafico-barras}
+\end{figure}
+
+\newpage
+
+\section*{\textcolor{graphcolor}{{\centering Estructura de clases del proyecto}}}
+
+\section*{\textcolor{graphcolor}{{\centering Clase txtData}}}
+
+La clase txtData tiene como objetivo cargar los datos de los archivos de texto en una ruta 
+específica. La clase tiene un constructor que toma una ruta como parámetro y utiliza esta 
+ruta para obtener todas las rutas de archivos en la carpeta. Luego, filtra las rutas para 
+obtener solo las rutas de archivos de texto y las almacena en un array llamado Paths. La 
+clase también tiene un array llamado Texts que contiene todo el texto de los archivos de texto en la ruta especificada. Además, tiene un array llamado Names que contiene los 
+nombres de los archivos de texto sin la extensión ".txt". 
+La clase también tiene un método llamado GetPaths que devuelve el array de rutas 
+actualizada, un método llamado GetNames que devuelve los nombres y un método 
+llamado GetTexts que devuelve todos los textos en los archivos de texto.
+
+\section*{\textcolor{graphcolor}{{\centering Clase tfidf}}}
+La clase llamada tfidf se utiliza para calcular el valor TF-IDF de las palabras en los 
+documentos y la similitud entre los documentos. La clase tiene varios diccionarios y 
+arreglos que se utilizan para almacenar los valores de TF, IDF, TF-IDF y similitud.
+Los diccionarios NameWordsTF, NameWordsIDF y NameWordsTFIDF se utilizan 
+para almacenar los valores de TF, IDF y TF-IDF para cada palabra en cada documento. El
+diccionario NameVSWorsd se utiliza para almacenar las palabras en cada documento, 
+mientras que el diccionario NameVSUnrepeatedWords se utiliza para almacenar las 
+palabras únicas en cada documento. El arreglo Names se utiliza para almacenar los 
+nombres de los documentos.
+Los diccionarios QueryTF, QueryIDF y QueryTFIDF se utilizan para almacenar los 
+valores de TF, IDF y TF-IDF para cada palabra en la consulta. La propiedad Query se 
+utiliza para almacenar la consulta, mientras que la propiedad QueryWords se utiliza para 
+almacenar las palabras en la consulta.
+Los diccionarios DocumentsSimilitude y DocumentsSimilitudeCos se utilizan para 
+almacenar la similitud entre los documentos. El diccionario Results se utiliza para 
+almacenar los resultados de la búsqueda, mientras que el diccionario Snippet se utiliza 
+para almacenar un fragmento de texto de cada documento que contiene la consulta.
+El constructor de la clase toma los diccionarios y arreglos mencionados anteriormente 
+como parámetros. El método Counter cuenta la cantidad de veces que una palabra 
+aparece en un arreglo de palabras. Y por último el método WhereExist cuenta la cantidad 
+de documentos en los que aparece una palabra.
+
+
+\section*{\textcolor{graphcolor}{{\centering Clase SearchResult}}}
+La clase SearchResult tiene como objetivo representar los resultados de una búsqueda. 
+Tiene un constructor que toma un arreglo de objetos SearchItem y una sugerencia de 
+búsqueda como parámetros. Si el arreglo de SearchItem es nulo, se lanza una excepción.
+La clase también tiene un constructor sin parámetros que crea un arreglo vacío de 
+SearchItem.
+La clase tiene una propiedad de solo lectura llamada Suggestion que almacena la 
+sugerencia de búsqueda. Además tiene un método llamado Items que devuelve una 
+enumeración de los objetos SearchItem en el arreglo items. Y por último tiene una 
+propiedad de solo lectura llamada Count que devuelve la cantidad de objetos SearchItem 
+en el arreglo items.
+
+
+\section*{\textcolor{graphcolor}{{\centering Clase SearchItem}}}
+La clase SearchItem representa un elemento de búsqueda. Tiene un constructor que toma
+tres parámetros: el título del elemento, un fragmento de texto que contiene la consulta y la
+puntuación del elemento. Tiene tres propiedades de solo lectura: Title, Snippet y Score, que almacenan el título del elemento, el fragmento de texto que contiene la consulta y la 
+puntuación del elemento, respectivamente. 
+
+
+\section*{\textcolor{graphcolor}{{\centering Clase Moogle}}}
+La clase `Moogle` es una clase estática que contiene dos métodos: `Cargar` y `Query`. El 
+método `Cargar` carga los datos de la base de datos y devuelve un diccionario que 
+contiene los resultados de la búsqueda. El método `Query` realiza una búsqueda en la 
+base de datos y devuelve los resultados en forma de objeto `SearchResult`. 
+La clase tiene una variable estática llamada `DocumentvsSnipet` que almacena un 
+diccionario que relaciona los nombres de los documentos con un fragmento de texto que 
+contiene la consulta. También tiene una variable estática llamada `objeto1` que almacena 
+una instancia de la clase `txtData`.
+El método `Cargar` utiliza la instancia de `txtData` para cargar los datos de la base de 
+datos y crear una instancia de la clase `tfidf`. Luego, utiliza la instancia de `tfidf` para 
+calcular el TFIDF de los documentos y la similitud coseno entre los documentos y la 
+consulta. Finalmente, agrega los snippets de los documentos a `DocumentvsSnipet` y 
+devuelve un diccionario que contiene los resultados de la búsqueda.
+El método `Query` utiliza el método `Cargar` para cargar los resultados de la búsqueda en
+un diccionario y los ordena por score. Luego, crea una lista de objetos `SearchItem` para 
+almacenar los resultados y los agrega a la lista. Finalmente, convierte la lista de objetos 
+`SearchItem` en un arreglo de objetos `SearchItem` y devuelve un objeto `SearchResult` 
+que contiene los resultados de la búsqueda
+
+
+\end{center}
+\end{document}

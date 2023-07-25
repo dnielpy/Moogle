@@ -1,0 +1,122 @@
+\documentclass{beamer}
+\usetheme{default}
+\usecolortheme{beaver}
+
+\usepackage{xcolor}
+\usepackage{amsmath, amssymb, amsfonts, amsthm, amssymb}
+\usepackage{url, hyperref}
+\usepackage{tikz}
+
+
+
+% Usar plantilla en español.
+\usepackage[spanish]{babel}
+
+% Agregar citas bibliográficas
+\usepackage{cite}
+
+% Poner código fuente en latex
+\usepackage{listings}
+\usepackage{color}
+
+\usepackage{listings}
+\usepackage{booktabs}
+\usepackage{bookmark}
+\usepackage{makecell}
+\usepackage{url}
+\usepackage{multirow}
+\usepackage{graphicx}
+
+
+\usepackage{beamerthemesplit}
+
+\definecolor{gray97}{gray}{.97}
+\definecolor{gray75}{gray}{.75}
+\definecolor{gray45}{gray}{.45}
+
+
+% Configuración de colores personalizados
+\definecolor{keywordcolor}{RGB}{0,0,128}
+\definecolor{stringcolor}{RGB}{0,128,0}
+\definecolor{commentcolor}{RGB}{128,128,128}
+\definecolor{backgroundcolor}{RGB}{245,245,245}
+\definecolor{graphcolor}{RGB}{0,128,128}
+
+\title[Moogle!]{\LARGE Moogle!}
+\author{Reynaldo Daniel Quesada García}
+\institute[Universidad de La Habana]
+{
+  Matcom
+}
+\date{\today}
+
+\begin{document}
+\begin{frame}
+  \maketitle
+\end{frame}
+
+\section{Introducción}
+
+\begin{frame}{Introducción}
+  
+  \textbf{Moogle!}Moogle! es una aplicacion web cuyo objetivo es realizar busquedas en una base
+de datos de archivos .txt y devolver los resultados en el menor tiempo posible.
+Para esto, se utilizan algoritmos de TF-IDF y otros conocimientos de algebra
+lineal que hacen mas eficiente el buscador.
+
+
+\end{frame}
+
+\begin{frame}{Plataforma de desarrollo}
+  Es una aplicación web, desarrollada con tecnología {\tt .NET Core 6.0}, específicamente
+  usando Blazor como {\it framework} web para la interfaz gráfica, y en el
+  lenguaje {\tt C\#}. \\
+\end{frame}
+
+\begin{frame}{Principales características de la app}
+    
+	- Utiliza el algoritmo TF-IDF así como conocimientos de álgebra lineal como motor de búsqueda
+	\\- Límite de archivos para buscar: ILIMITADO
+	\\- En esta versión el usuario podrá buscar frases en los libros y no solo una palabra
+	\\- Buena escalabilidad del código para futuros agregos 
+    
+\end{frame}
+
+\subsection*{Instrucciones para el uso optimo de la aplicacion}
+
+\begin{frame}{Instrucciones para el uso optimo de la aplicacion}
+    \begin{center}
+	Dentro de la carpeta Script, se encuentra un pequeño script para bash encargado de ejecutar el proyecto (Asi como este PDF y el de la presentación). Los comandos para ejecutar el script son:
+\\run - Compila y ejecuta el proyecto
+\\report - Compila el latex del informe
+\\slides - Compila el latex de la presentación
+\\show-report - Revisa a ver si ya está creado el pdf del informe, y sinó, ejecuta report (compila el latex)
+\\show-slides - Revisa a ver si ya está creado el pdf de la presentacion, y sinó, ejecuta slides (compila el latex)
+\\clean - Limpia de las carpetas Presentacion e Informe todo lo que no sea .tex       
+    \end{center}
+\end{frame}
+
+
+
+\section{Tiempos de carga}
+
+\begin{frame}{Conclusiones}
+   La carga de la base de datos solo se realiza en la primera búsqueda que usted realice, luego se 
+almacena en memoria, por lo que esta primera búsqueda demorará unos pocos segundos
+más que las siguientes que usted realice. El gráfico representa la cantidad de tiempo que demora la primera busqueda (Tiempo de carga A) con respecto al tiempo que demoran las siquientes búsquedas
+
+\begin{figure}[H]
+  \centering
+  \begin{tikzpicture}
+    \draw[fill=graphcolor] (0,0) rectangle (2,4);
+    \draw[fill=graphcolor!25] (4.4,0) rectangle (6.4,2);
+    \draw (1,4) node[above] {Tiempo de carga A};
+    \draw (5.4,2) node[above] {Tiempo de carga B};
+  \end{tikzpicture}
+  \caption{Representación de los tiempos de carga de la primera búsqueda y el resto}
+  \label{fig:grafico-barras}
+\end{figure}
+\end{frame}
+
+
+\end{document}
