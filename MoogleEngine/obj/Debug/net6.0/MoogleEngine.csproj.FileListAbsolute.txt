@@ -34,3 +34,15 @@ C:/Users/dnielpy/Documents/Code/GitHub/Moogle!/Moogle/MoogleEngine/obj/Debug/net
 /mnt/c/Users/dnielpy/Documents/Code/GitHub/Moogle!/Moogle/MoogleEngine/obj/Debug/net6.0/refint/MoogleEngine.dll
 /mnt/c/Users/dnielpy/Documents/Code/GitHub/Moogle!/Moogle/MoogleEngine/obj/Debug/net6.0/MoogleEngine.pdb
 /mnt/c/Users/dnielpy/Documents/Code/GitHub/Moogle!/Moogle/MoogleEngine/obj/Debug/net6.0/ref/MoogleEngine.dll
+C:\Users\Dnielpy\Documents\Code\Github\Moogle\Moogle\MoogleEngine\bin\Debug\net6.0\MoogleEngine.deps.json
+C:\Users\Dnielpy\Documents\Code\Github\Moogle\Moogle\MoogleEngine\bin\Debug\net6.0\MoogleEngine.dll
+C:\Users\Dnielpy\Documents\Code\Github\Moogle\Moogle\MoogleEngine\bin\Debug\net6.0\MoogleEngine.pdb
+C:\Users\Dnielpy\Documents\Code\Github\Moogle\Moogle\MoogleEngine\obj\Debug\net6.0\MoogleEngine.csproj.AssemblyReference.cache
+C:\Users\Dnielpy\Documents\Code\Github\Moogle\Moogle\MoogleEngine\obj\Debug\net6.0\MoogleEngine.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Dnielpy\Documents\Code\Github\Moogle\Moogle\MoogleEngine\obj\Debug\net6.0\MoogleEngine.AssemblyInfoInputs.cache
+C:\Users\Dnielpy\Documents\Code\Github\Moogle\Moogle\MoogleEngine\obj\Debug\net6.0\MoogleEngine.AssemblyInfo.cs
+C:\Users\Dnielpy\Documents\Code\Github\Moogle\Moogle\MoogleEngine\obj\Debug\net6.0\MoogleEngine.csproj.CoreCompileInputs.cache
+C:\Users\Dnielpy\Documents\Code\Github\Moogle\Moogle\MoogleEngine\obj\Debug\net6.0\MoogleEngine.dll
+C:\Users\Dnielpy\Documents\Code\Github\Moogle\Moogle\MoogleEngine\obj\Debug\net6.0\refint\MoogleEngine.dll
+C:\Users\Dnielpy\Documents\Code\Github\Moogle\Moogle\MoogleEngine\obj\Debug\net6.0\MoogleEngine.pdb
+C:\Users\Dnielpy\Documents\Code\Github\Moogle\Moogle\MoogleEngine\obj\Debug\net6.0\ref\MoogleEngine.dll

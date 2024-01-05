@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "yO9hJg8GfUELpAlVVxsYfkMyUOZ19BI9q0B5s8d1NyY=",
+  "Hash": "OyyXzQ5YZPyX5Dc+XuVu/ASxS8OFEfZTE072S0LgyII=",
   "Source": "MoogleServer",
   "BasePath": "_content/MoogleServer",
   "Mode": "Default",
@@ -8,19 +8,19 @@
   "ReferencedProjectsConfiguration": [],
   "DiscoveryPatterns": [
     {
-      "Name": "MoogleServer/wwwroot",
+      "Name": "MoogleServer\\wwwroot",
       "Source": "MoogleServer",
-      "ContentRoot": "/mnt/c/Users/dnielpy/Documents/Code/GitHub/Moogle!/Moogle/MoogleServer/wwwroot/",
+      "ContentRoot": "C:\\Users\\Dnielpy\\Documents\\Code\\Github\\Moogle\\Moogle\\MoogleServer\\wwwroot\\",
       "BasePath": "_content/MoogleServer",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-      "Identity": "/mnt/c/Users/dnielpy/Documents/Code/GitHub/Moogle!/Moogle/MoogleServer/obj/Debug/net6.0/scopedcss/bundle/MoogleServer.styles.css",
+      "Identity": "C:\\Users\\Dnielpy\\Documents\\Code\\Github\\Moogle\\Moogle\\MoogleServer\\obj\\Debug\\net6.0\\scopedcss\\bundle\\MoogleServer.styles.css",
       "SourceId": "MoogleServer",
       "SourceType": "Computed",
-      "ContentRoot": "/mnt/c/Users/dnielpy/Documents/Code/GitHub/Moogle!/Moogle/MoogleServer/obj/Debug/net6.0/scopedcss/bundle/",
+      "ContentRoot": "C:\\Users\\Dnielpy\\Documents\\Code\\Github\\Moogle\\Moogle\\MoogleServer\\obj\\Debug\\net6.0\\scopedcss\\bundle\\",
       "BasePath": "_content/MoogleServer",
       "RelativePath": "MoogleServer.styles.css",
       "AssetKind": "All",
@@ -31,13 +31,13 @@
       "AssetTraitValue": "ApplicationBundle",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "/mnt/c/Users/dnielpy/Documents/Code/GitHub/Moogle!/Moogle/MoogleServer/obj/Debug/net6.0/scopedcss/bundle/MoogleServer.styles.css"
+      "OriginalItemSpec": "C:\\Users\\Dnielpy\\Documents\\Code\\Github\\Moogle\\Moogle\\MoogleServer\\obj\\Debug\\net6.0\\scopedcss\\bundle\\MoogleServer.styles.css"
     },
     {
-      "Identity": "/mnt/c/Users/dnielpy/Documents/Code/GitHub/Moogle!/Moogle/MoogleServer/obj/Debug/net6.0/scopedcss/projectbundle/MoogleServer.bundle.scp.css",
+      "Identity": "C:\\Users\\Dnielpy\\Documents\\Code\\Github\\Moogle\\Moogle\\MoogleServer\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\MoogleServer.bundle.scp.css",
       "SourceId": "MoogleServer",
       "SourceType": "Computed",
-      "ContentRoot": "/mnt/c/Users/dnielpy/Documents/Code/GitHub/Moogle!/Moogle/MoogleServer/obj/Debug/net6.0/scopedcss/projectbundle/",
+      "ContentRoot": "C:\\Users\\Dnielpy\\Documents\\Code\\Github\\Moogle\\Moogle\\MoogleServer\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\",
       "BasePath": "_content/MoogleServer",
       "RelativePath": "MoogleServer.bundle.scp.css",
       "AssetKind": "All",
@@ -48,13 +48,13 @@
       "AssetTraitValue": "ProjectBundle",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "/mnt/c/Users/dnielpy/Documents/Code/GitHub/Moogle!/Moogle/MoogleServer/obj/Debug/net6.0/scopedcss/projectbundle/MoogleServer.bundle.scp.css"
+      "OriginalItemSpec": "C:\\Users\\Dnielpy\\Documents\\Code\\Github\\Moogle\\Moogle\\MoogleServer\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\MoogleServer.bundle.scp.css"
     },
     {
-      "Identity": "/mnt/c/Users/dnielpy/Documents/Code/GitHub/Moogle!/Moogle/MoogleServer/wwwroot/css/bootstrap/bootstrap.min.css",
+      "Identity": "C:\\Users\\Dnielpy\\Documents\\Code\\Github\\Moogle\\Moogle\\MoogleServer\\wwwroot\\css\\bootstrap\\bootstrap.min.css",
       "SourceId": "MoogleServer",
       "SourceType": "Discovered",
-      "ContentRoot": "/mnt/c/Users/dnielpy/Documents/Code/GitHub/Moogle!/Moogle/MoogleServer/wwwroot/",
+      "ContentRoot": "C:\\Users\\Dnielpy\\Documents\\Code\\Github\\Moogle\\Moogle\\MoogleServer\\wwwroot\\",
       "BasePath": "_content/MoogleServer",
       "RelativePath": "css/bootstrap/bootstrap.min.css",
       "AssetKind": "All",
@@ -65,13 +65,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot/css/bootstrap/bootstrap.min.css"
+      "OriginalItemSpec": "wwwroot\\css\\bootstrap\\bootstrap.min.css"
     },
     {
-      "Identity": "/mnt/c/Users/dnielpy/Documents/Code/GitHub/Moogle!/Moogle/MoogleServer/wwwroot/css/bootstrap/bootstrap.min.css.map",
+      "Identity": "C:\\Users\\Dnielpy\\Documents\\Code\\Github\\Moogle\\Moogle\\MoogleServer\\wwwroot\\css\\bootstrap\\bootstrap.min.css.map",
       "SourceId": "MoogleServer",
       "SourceType": "Discovered",
-      "ContentRoot": "/mnt/c/Users/dnielpy/Documents/Code/GitHub/Moogle!/Moogle/MoogleServer/wwwroot/",
+      "ContentRoot": "C:\\Users\\Dnielpy\\Documents\\Code\\Github\\Moogle\\Moogle\\MoogleServer\\wwwroot\\",
       "BasePath": "_content/MoogleServer",
       "RelativePath": "css/bootstrap/bootstrap.min.css.map",
       "AssetKind": "All",
@@ -82,13 +82,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot/css/bootstrap/bootstrap.min.css.map"
+      "OriginalItemSpec": "wwwroot\\css\\bootstrap\\bootstrap.min.css.map"
     },
     {
-      "Identity": "/mnt/c/Users/dnielpy/Documents/Code/GitHub/Moogle!/Moogle/MoogleServer/wwwroot/css/open-iconic/FONT-LICENSE",
+      "Identity": "C:\\Users\\Dnielpy\\Documents\\Code\\Github\\Moogle\\Moogle\\MoogleServer\\wwwroot\\css\\open-iconic\\FONT-LICENSE",
       "SourceId": "MoogleServer",
       "SourceType": "Discovered",
-      "ContentRoot": "/mnt/c/Users/dnielpy/Documents/Code/GitHub/Moogle!/Moogle/MoogleServer/wwwroot/",
+      "ContentRoot": "C:\\Users\\Dnielpy\\Documents\\Code\\Github\\Moogle\\Moogle\\MoogleServer\\wwwroot\\",
       "BasePath": "_content/MoogleServer",
       "RelativePath": "css/open-iconic/FONT-LICENSE",
       "AssetKind": "All",
@@ -99,13 +99,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot/css/open-iconic/FONT-LICENSE"
+      "OriginalItemSpec": "wwwroot\\css\\open-iconic\\FONT-LICENSE"
     },
     {
-      "Identity": "/mnt/c/Users/dnielpy/Documents/Code/GitHub/Moogle!/Moogle/MoogleServer/wwwroot/css/open-iconic/font/css/open-iconic-bootstrap.min.css",
+      "Identity": "C:\\Users\\Dnielpy\\Documents\\Code\\Github\\Moogle\\Moogle\\MoogleServer\\wwwroot\\css\\open-iconic\\font\\css\\open-iconic-bootstrap.min.css",
       "SourceId": "MoogleServer",
       "SourceType": "Discovered",
-      "ContentRoot": "/mnt/c/Users/dnielpy/Documents/Code/GitHub/Moogle!/Moogle/MoogleServer/wwwroot/",
+      "ContentRoot": "C:\\Users\\Dnielpy\\Documents\\Code\\Github\\Moogle\\Moogle\\MoogleServer\\wwwroot\\",
       "BasePath": "_content/MoogleServer",
       "RelativePath": "css/open-iconic/font/css/open-iconic-bootstrap.min.css",
       "AssetKind": "All",
@@ -116,13 +116,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot/css/open-iconic/font/css/open-iconic-bootstrap.min.css"
+      "OriginalItemSpec": "wwwroot\\css\\open-iconic\\font\\css\\open-iconic-bootstrap.min.css"
     },
     {
-      "Identity": "/mnt/c/Users/dnielpy/Documents/Code/GitHub/Moogle!/Moogle/MoogleServer/wwwroot/css/open-iconic/font/fonts/open-iconic.eot",
+      "Identity": "C:\\Users\\Dnielpy\\Documents\\Code\\Github\\Moogle\\Moogle\\MoogleServer\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.eot",
       "SourceId": "MoogleServer",
       "SourceType": "Discovered",
-      "ContentRoot": "/mnt/c/Users/dnielpy/Documents/Code/GitHub/Moogle!/Moogle/MoogleServer/wwwroot/",
+      "ContentRoot": "C:\\Users\\Dnielpy\\Documents\\Code\\Github\\Moogle\\Moogle\\MoogleServer\\wwwroot\\",
       "BasePath": "_content/MoogleServer",
       "RelativePath": "css/open-iconic/font/fonts/open-iconic.eot",
       "AssetKind": "All",
@@ -133,13 +133,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot/css/open-iconic/font/fonts/open-iconic.eot"
+      "OriginalItemSpec": "wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.eot"
     },
     {
-      "Identity": "/mnt/c/Users/dnielpy/Documents/Code/GitHub/Moogle!/Moogle/MoogleServer/wwwroot/css/open-iconic/font/fonts/open-iconic.otf",
+      "Identity": "C:\\Users\\Dnielpy\\Documents\\Code\\Github\\Moogle\\Moogle\\MoogleServer\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.otf",
       "SourceId": "MoogleServer",
       "SourceType": "Discovered",
-      "ContentRoot": "/mnt/c/Users/dnielpy/Documents/Code/GitHub/Moogle!/Moogle/MoogleServer/wwwroot/",
+      "ContentRoot": "C:\\Users\\Dnielpy\\Documents\\Code\\Github\\Moogle\\Moogle\\MoogleServer\\wwwroot\\",
       "BasePath": "_content/MoogleServer",
       "RelativePath": "css/open-iconic/font/fonts/open-iconic.otf",
       "AssetKind": "All",
@@ -150,13 +150,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot/css/open-iconic/font/fonts/open-iconic.otf"
+      "OriginalItemSpec": "wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.otf"
     },
     {
-      "Identity": "/mnt/c/Users/dnielpy/Documents/Code/GitHub/Moogle!/Moogle/MoogleServer/wwwroot/css/open-iconic/font/fonts/open-iconic.svg",
+      "Identity": "C:\\Users\\Dnielpy\\Documents\\Code\\Github\\Moogle\\Moogle\\MoogleServer\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.svg",
       "SourceId": "MoogleServer",
       "SourceType": "Discovered",
-      "ContentRoot": "/mnt/c/Users/dnielpy/Documents/Code/GitHub/Moogle!/Moogle/MoogleServer/wwwroot/",
+      "ContentRoot": "C:\\Users\\Dnielpy\\Documents\\Code\\Github\\Moogle\\Moogle\\MoogleServer\\wwwroot\\",
       "BasePath": "_content/MoogleServer",
       "RelativePath": "css/open-iconic/font/fonts/open-iconic.svg",
       "AssetKind": "All",
@@ -167,13 +167,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot/css/open-iconic/font/fonts/open-iconic.svg"
+      "OriginalItemSpec": "wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.svg"
     },
     {
-      "Identity": "/mnt/c/Users/dnielpy/Documents/Code/GitHub/Moogle!/Moogle/MoogleServer/wwwroot/css/open-iconic/font/fonts/open-iconic.ttf",
+      "Identity": "C:\\Users\\Dnielpy\\Documents\\Code\\Github\\Moogle\\Moogle\\MoogleServer\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.ttf",
       "SourceId": "MoogleServer",
       "SourceType": "Discovered",
-      "ContentRoot": "/mnt/c/Users/dnielpy/Documents/Code/GitHub/Moogle!/Moogle/MoogleServer/wwwroot/",
+      "ContentRoot": "C:\\Users\\Dnielpy\\Documents\\Code\\Github\\Moogle\\Moogle\\MoogleServer\\wwwroot\\",
       "BasePath": "_content/MoogleServer",
       "RelativePath": "css/open-iconic/font/fonts/open-iconic.ttf",
       "AssetKind": "All",
@@ -184,13 +184,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot/css/open-iconic/font/fonts/open-iconic.ttf"
+      "OriginalItemSpec": "wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.ttf"
     },
     {
-      "Identity": "/mnt/c/Users/dnielpy/Documents/Code/GitHub/Moogle!/Moogle/MoogleServer/wwwroot/css/open-iconic/font/fonts/open-iconic.woff",
+      "Identity": "C:\\Users\\Dnielpy\\Documents\\Code\\Github\\Moogle\\Moogle\\MoogleServer\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.woff",
       "SourceId": "MoogleServer",
       "SourceType": "Discovered",
-      "ContentRoot": "/mnt/c/Users/dnielpy/Documents/Code/GitHub/Moogle!/Moogle/MoogleServer/wwwroot/",
+      "ContentRoot": "C:\\Users\\Dnielpy\\Documents\\Code\\Github\\Moogle\\Moogle\\MoogleServer\\wwwroot\\",
       "BasePath": "_content/MoogleServer",
       "RelativePath": "css/open-iconic/font/fonts/open-iconic.woff",
       "AssetKind": "All",
@@ -201,13 +201,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot/css/open-iconic/font/fonts/open-iconic.woff"
+      "OriginalItemSpec": "wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.woff"
     },
     {
-      "Identity": "/mnt/c/Users/dnielpy/Documents/Code/GitHub/Moogle!/Moogle/MoogleServer/wwwroot/css/open-iconic/ICON-LICENSE",
+      "Identity": "C:\\Users\\Dnielpy\\Documents\\Code\\Github\\Moogle\\Moogle\\MoogleServer\\wwwroot\\css\\open-iconic\\ICON-LICENSE",
       "SourceId": "MoogleServer",
       "SourceType": "Discovered",
-      "ContentRoot": "/mnt/c/Users/dnielpy/Documents/Code/GitHub/Moogle!/Moogle/MoogleServer/wwwroot/",
+      "ContentRoot": "C:\\Users\\Dnielpy\\Documents\\Code\\Github\\Moogle\\Moogle\\MoogleServer\\wwwroot\\",
       "BasePath": "_content/MoogleServer",
       "RelativePath": "css/open-iconic/ICON-LICENSE",
       "AssetKind": "All",
@@ -218,13 +218,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot/css/open-iconic/ICON-LICENSE"
+      "OriginalItemSpec": "wwwroot\\css\\open-iconic\\ICON-LICENSE"
     },
     {
-      "Identity": "/mnt/c/Users/dnielpy/Documents/Code/GitHub/Moogle!/Moogle/MoogleServer/wwwroot/css/open-iconic/README.md",
+      "Identity": "C:\\Users\\Dnielpy\\Documents\\Code\\Github\\Moogle\\Moogle\\MoogleServer\\wwwroot\\css\\open-iconic\\README.md",
       "SourceId": "MoogleServer",
       "SourceType": "Discovered",
-      "ContentRoot": "/mnt/c/Users/dnielpy/Documents/Code/GitHub/Moogle!/Moogle/MoogleServer/wwwroot/",
+      "ContentRoot": "C:\\Users\\Dnielpy\\Documents\\Code\\Github\\Moogle\\Moogle\\MoogleServer\\wwwroot\\",
       "BasePath": "_content/MoogleServer",
       "RelativePath": "css/open-iconic/README.md",
       "AssetKind": "All",
@@ -235,13 +235,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot/css/open-iconic/README.md"
+      "OriginalItemSpec": "wwwroot\\css\\open-iconic\\README.md"
     },
     {
-      "Identity": "/mnt/c/Users/dnielpy/Documents/Code/GitHub/Moogle!/Moogle/MoogleServer/wwwroot/css/Overseer Bold Italic.otf",
+      "Identity": "C:\\Users\\Dnielpy\\Documents\\Code\\Github\\Moogle\\Moogle\\MoogleServer\\wwwroot\\css\\Overseer Bold Italic.otf",
       "SourceId": "MoogleServer",
       "SourceType": "Discovered",
-      "ContentRoot": "/mnt/c/Users/dnielpy/Documents/Code/GitHub/Moogle!/Moogle/MoogleServer/wwwroot/",
+      "ContentRoot": "C:\\Users\\Dnielpy\\Documents\\Code\\Github\\Moogle\\Moogle\\MoogleServer\\wwwroot\\",
       "BasePath": "_content/MoogleServer",
       "RelativePath": "css/Overseer Bold Italic.otf",
       "AssetKind": "All",
@@ -252,13 +252,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot/css/Overseer Bold Italic.otf"
+      "OriginalItemSpec": "wwwroot\\css\\Overseer Bold Italic.otf"
     },
     {
-      "Identity": "/mnt/c/Users/dnielpy/Documents/Code/GitHub/Moogle!/Moogle/MoogleServer/wwwroot/css/Overseer Bold.otf",
+      "Identity": "C:\\Users\\Dnielpy\\Documents\\Code\\Github\\Moogle\\Moogle\\MoogleServer\\wwwroot\\css\\Overseer Bold.otf",
       "SourceId": "MoogleServer",
       "SourceType": "Discovered",
-      "ContentRoot": "/mnt/c/Users/dnielpy/Documents/Code/GitHub/Moogle!/Moogle/MoogleServer/wwwroot/",
+      "ContentRoot": "C:\\Users\\Dnielpy\\Documents\\Code\\Github\\Moogle\\Moogle\\MoogleServer\\wwwroot\\",
       "BasePath": "_content/MoogleServer",
       "RelativePath": "css/Overseer Bold.otf",
       "AssetKind": "All",
@@ -269,13 +269,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot/css/Overseer Bold.otf"
+      "OriginalItemSpec": "wwwroot\\css\\Overseer Bold.otf"
     },
     {
-      "Identity": "/mnt/c/Users/dnielpy/Documents/Code/GitHub/Moogle!/Moogle/MoogleServer/wwwroot/css/Overseer Italic.otf",
+      "Identity": "C:\\Users\\Dnielpy\\Documents\\Code\\Github\\Moogle\\Moogle\\MoogleServer\\wwwroot\\css\\Overseer Italic.otf",
       "SourceId": "MoogleServer",
       "SourceType": "Discovered",
-      "ContentRoot": "/mnt/c/Users/dnielpy/Documents/Code/GitHub/Moogle!/Moogle/MoogleServer/wwwroot/",
+      "ContentRoot": "C:\\Users\\Dnielpy\\Documents\\Code\\Github\\Moogle\\Moogle\\MoogleServer\\wwwroot\\",
       "BasePath": "_content/MoogleServer",
       "RelativePath": "css/Overseer Italic.otf",
       "AssetKind": "All",
@@ -286,13 +286,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot/css/Overseer Italic.otf"
+      "OriginalItemSpec": "wwwroot\\css\\Overseer Italic.otf"
     },
     {
-      "Identity": "/mnt/c/Users/dnielpy/Documents/Code/GitHub/Moogle!/Moogle/MoogleServer/wwwroot/css/Overseer.otf",
+      "Identity": "C:\\Users\\Dnielpy\\Documents\\Code\\Github\\Moogle\\Moogle\\MoogleServer\\wwwroot\\css\\Overseer.otf",
       "SourceId": "MoogleServer",
       "SourceType": "Discovered",
-      "ContentRoot": "/mnt/c/Users/dnielpy/Documents/Code/GitHub/Moogle!/Moogle/MoogleServer/wwwroot/",
+      "ContentRoot": "C:\\Users\\Dnielpy\\Documents\\Code\\Github\\Moogle\\Moogle\\MoogleServer\\wwwroot\\",
       "BasePath": "_content/MoogleServer",
       "RelativePath": "css/Overseer.otf",
       "AssetKind": "All",
@@ -303,13 +303,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot/css/Overseer.otf"
+      "OriginalItemSpec": "wwwroot\\css\\Overseer.otf"
     },
     {
-      "Identity": "/mnt/c/Users/dnielpy/Documents/Code/GitHub/Moogle!/Moogle/MoogleServer/wwwroot/css/r2.png",
+      "Identity": "C:\\Users\\Dnielpy\\Documents\\Code\\Github\\Moogle\\Moogle\\MoogleServer\\wwwroot\\css\\r2.png",
       "SourceId": "MoogleServer",
       "SourceType": "Discovered",
-      "ContentRoot": "/mnt/c/Users/dnielpy/Documents/Code/GitHub/Moogle!/Moogle/MoogleServer/wwwroot/",
+      "ContentRoot": "C:\\Users\\Dnielpy\\Documents\\Code\\Github\\Moogle\\Moogle\\MoogleServer\\wwwroot\\",
       "BasePath": "_content/MoogleServer",
       "RelativePath": "css/r2.png",
       "AssetKind": "All",
@@ -320,13 +320,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot/css/r2.png"
+      "OriginalItemSpec": "wwwroot\\css\\r2.png"
     },
     {
-      "Identity": "/mnt/c/Users/dnielpy/Documents/Code/GitHub/Moogle!/Moogle/MoogleServer/wwwroot/css/R4.jpg",
+      "Identity": "C:\\Users\\Dnielpy\\Documents\\Code\\Github\\Moogle\\Moogle\\MoogleServer\\wwwroot\\css\\R4.jpg",
       "SourceId": "MoogleServer",
       "SourceType": "Discovered",
-      "ContentRoot": "/mnt/c/Users/dnielpy/Documents/Code/GitHub/Moogle!/Moogle/MoogleServer/wwwroot/",
+      "ContentRoot": "C:\\Users\\Dnielpy\\Documents\\Code\\Github\\Moogle\\Moogle\\MoogleServer\\wwwroot\\",
       "BasePath": "_content/MoogleServer",
       "RelativePath": "css/R4.jpg",
       "AssetKind": "All",
@@ -337,13 +337,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot/css/R4.jpg"
+      "OriginalItemSpec": "wwwroot\\css\\R4.jpg"
     },
     {
-      "Identity": "/mnt/c/Users/dnielpy/Documents/Code/GitHub/Moogle!/Moogle/MoogleServer/wwwroot/css/site.css",
+      "Identity": "C:\\Users\\Dnielpy\\Documents\\Code\\Github\\Moogle\\Moogle\\MoogleServer\\wwwroot\\css\\site.css",
       "SourceId": "MoogleServer",
       "SourceType": "Discovered",
-      "ContentRoot": "/mnt/c/Users/dnielpy/Documents/Code/GitHub/Moogle!/Moogle/MoogleServer/wwwroot/",
+      "ContentRoot": "C:\\Users\\Dnielpy\\Documents\\Code\\Github\\Moogle\\Moogle\\MoogleServer\\wwwroot\\",
       "BasePath": "_content/MoogleServer",
       "RelativePath": "css/site.css",
       "AssetKind": "All",
@@ -354,13 +354,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot/css/site.css"
+      "OriginalItemSpec": "wwwroot\\css\\site.css"
     },
     {
-      "Identity": "/mnt/c/Users/dnielpy/Documents/Code/GitHub/Moogle!/Moogle/MoogleServer/wwwroot/css/title.png",
+      "Identity": "C:\\Users\\Dnielpy\\Documents\\Code\\Github\\Moogle\\Moogle\\MoogleServer\\wwwroot\\css\\title.png",
       "SourceId": "MoogleServer",
       "SourceType": "Discovered",
-      "ContentRoot": "/mnt/c/Users/dnielpy/Documents/Code/GitHub/Moogle!/Moogle/MoogleServer/wwwroot/",
+      "ContentRoot": "C:\\Users\\Dnielpy\\Documents\\Code\\Github\\Moogle\\Moogle\\MoogleServer\\wwwroot\\",
       "BasePath": "_content/MoogleServer",
       "RelativePath": "css/title.png",
       "AssetKind": "All",
@@ -371,13 +371,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot/css/title.png"
+      "OriginalItemSpec": "wwwroot\\css\\title.png"
     },
     {
-      "Identity": "/mnt/c/Users/dnielpy/Documents/Code/GitHub/Moogle!/Moogle/MoogleServer/wwwroot/favicon.ico",
+      "Identity": "C:\\Users\\Dnielpy\\Documents\\Code\\Github\\Moogle\\Moogle\\MoogleServer\\wwwroot\\favicon.ico",
       "SourceId": "MoogleServer",
       "SourceType": "Discovered",
-      "ContentRoot": "/mnt/c/Users/dnielpy/Documents/Code/GitHub/Moogle!/Moogle/MoogleServer/wwwroot/",
+      "ContentRoot": "C:\\Users\\Dnielpy\\Documents\\Code\\Github\\Moogle\\Moogle\\MoogleServer\\wwwroot\\",
       "BasePath": "_content/MoogleServer",
       "RelativePath": "favicon.ico",
       "AssetKind": "All",
@@ -388,7 +388,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot/favicon.ico"
+      "OriginalItemSpec": "wwwroot\\favicon.ico"
     }
   ]
 }

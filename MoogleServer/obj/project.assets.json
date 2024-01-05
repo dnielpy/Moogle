@@ -27,19 +27,19 @@
     ]
   },
   "packageFolders": {
-    "/home/dnielpy/.nuget/packages/": {}
+    "C:\\Users\\Dnielpy\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/mnt/c/Users/dnielpy/Documents/Code/GitHub/Moogle!/Moogle/MoogleServer/MoogleServer.csproj",
+      "projectUniqueName": "C:\\Users\\Dnielpy\\Documents\\Code\\Github\\Moogle\\Moogle\\MoogleServer\\MoogleServer.csproj",
       "projectName": "MoogleServer",
-      "projectPath": "/mnt/c/Users/dnielpy/Documents/Code/GitHub/Moogle!/Moogle/MoogleServer/MoogleServer.csproj",
-      "packagesPath": "/home/dnielpy/.nuget/packages/",
-      "outputPath": "/mnt/c/Users/dnielpy/Documents/Code/GitHub/Moogle!/Moogle/MoogleServer/obj/",
+      "projectPath": "C:\\Users\\Dnielpy\\Documents\\Code\\Github\\Moogle\\Moogle\\MoogleServer\\MoogleServer.csproj",
+      "packagesPath": "C:\\Users\\Dnielpy\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Dnielpy\\Documents\\Code\\Github\\Moogle\\Moogle\\MoogleServer\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/home/dnielpy/.nuget/NuGet/NuGet.Config"
+        "C:\\Users\\Dnielpy\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net6.0"
@@ -51,8 +51,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "/mnt/c/Users/dnielpy/Documents/Code/GitHub/Moogle!/Moogle/MoogleEngine/MoogleEngine.csproj": {
-              "projectPath": "/mnt/c/Users/dnielpy/Documents/Code/GitHub/Moogle!/Moogle/MoogleEngine/MoogleEngine.csproj"
+            "C:\\Users\\Dnielpy\\Documents\\Code\\Github\\Moogle\\Moogle\\MoogleEngine\\MoogleEngine.csproj": {
+              "projectPath": "C:\\Users\\Dnielpy\\Documents\\Code\\Github\\Moogle\\Moogle\\MoogleEngine\\MoogleEngine.csproj"
             }
           }
         }
@@ -85,7 +85,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/mnt/c/Users/dnielpy/Documents/.dotnet/sdk/6.0.412/RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.407\\RuntimeIdentifierGraph.json"
       }
     }
   }
